@@ -131,6 +131,39 @@
             background-color: rgb(1,53,103);
         }
 
+        .hamburguesaButton {
+            background-color: black;
+            padding: 15px;
+            color: white;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            position: fixed;
+            z-index: 9999;
+            left: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .menuDeHamburguesa {
+            background-color: black;
+            width: 200px;
+            position: fixed;
+            z-index: 9999;
+            height: 100%;
+            margin-left: -200px;
+        }
+
+        .menuDeHamburguesa > ul {
+            list-style-type: none;
+            color: white;
+        }
+
+        ul > li {
+            cursor: pointer;
+            margin: 20px 0;
+        }
+
     </style>
     <script>
         var maxHeight = 600;
@@ -145,6 +178,45 @@
             return { width: imageWidth, height: imageHeight };
         }
 
+        function showHamburguesa()
+        {
+            $('.menuDeHamburguesa').animate({
+                'margin-left': '0px',
+            })
+            $('.hamburguesaButton').animate({
+                'left': '210px',
+            }, function() {
+                $(this).attr('data-position', 'show');
+                $(this).html("<-")
+
+            });
+        }
+
+        function hideHamburguesa()
+        {
+            $('.menuDeHamburguesa').animate({
+                'margin-left': '-200px',
+            })
+            $('.hamburguesaButton').animate({
+                'left': '10px',
+            }, function() {
+                $(this).attr('data-position', 'hide');
+                $(this).html("->")
+            });
+        }
+
+        function clickedHamburguesa()
+        {
+            if ($(this).attr('data-position') == 'show')
+            {
+                hideHamburguesa();
+            }
+            else
+            {
+                showHamburguesa();
+            }
+        }
+
         $(document).on('ready', function() {
             var img = 'pulseFront.jpg';
             var dimensions = getNativeDimensions(img);
@@ -157,6 +229,7 @@
             dimensionalHeight = dimensionalHeight - 20 > windowHeight ? windowHeight - 20 > maxHeight ? maxHeight : windowHeight - 20: dimensionalHeight - 20 > maxHeight ? maxHeight : dimensionalHeight - 20;
             $($('.landing')[0]).height(dimensionalHeight);
 
+            $('.hamburguesaButton').on('click', clickedHamburguesa);
             // var temp = $('.accent')
             // for (var idx in temp)
             // {
@@ -201,6 +274,14 @@
 </head>
 
 <body>
+    <div class="hamburguesaButton">-></div>
+    <div class="menuDeHamburguesa" data-position="hide">
+        <ul>
+            <li>ECE Pulse</li>
+            <li>Sponsors</li>
+            <li>Competitions</li>
+        </ul>
+    </div>
     <div class="homepage">
         <div class="col-md-12 col-lg-12 col-sm-12 landing">
             <span class="col-md-12 col-lg-12 col-sm-12 col-xs-12 label">ECE PULSE 2016</span><br/>
