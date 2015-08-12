@@ -20,7 +20,6 @@
             url('pulseFront.jpg');
             background-size: 100%;
             background-repeat: no-repeat;
-            height: 700px;
             margin-bottom: 30px;
         }
 
@@ -32,7 +31,7 @@
             top: 50%;
             position: relative;
             transform: translateY(-50%);
-            font-size: 4em;
+            font-size: 7vw;
         }
 
         .caption {
@@ -43,7 +42,7 @@
             top: 50%;
             position: relative;
             transform: translateY(-50%);
-            font-size: 1.5em;
+            font-size: 3vw;
 
         }
 
@@ -57,6 +56,7 @@
             font-size: 1.5em;
             margin-bottom: 20px;
             font-family: 'Raleway', sans-serif;
+            color: #DE592B;
 
         }
 
@@ -68,17 +68,40 @@
             height: 1px;
             background: linear-gradient( to right, 
                 rgba(1,53,103,0), 
-                rgba(1,53,103,0.40), 
+                rgba(1,53,103,0.20), 
                 rgba(1,53,103,0));
             margin: 40px 0;
 
         }
 
+        .placeholder {
+            width: 100%;
+        }
+
     </style>
     <script>
+        function getNativeDimensions(img)
+        {
+            var theImage = new Image();
+            theImage.src = img;
+
+            // Get accurate measurements from that.
+            var imageWidth = 3456;
+            var imageHeight = 2304;
+            return { width: imageWidth, height: imageHeight };
+        }
+
         $(document).on('ready', function() {
-            var height = $(window).height() - 20;
-            $($('.landing')[0]).height(height);
+            var img = 'pulseFront.jpg';
+            var dimensions = getNativeDimensions(img);
+
+            var aspectRatio = dimensions.height/dimensions.width;
+            var windowHeight = $(window).height();
+            var windowWidth = $(window).width();
+
+            dimensionalHeight = windowWidth * aspectRatio;
+            dimensionalHeight = dimensionalHeight - 20 > windowHeight ? windowHeight - 20 : dimensionalHeight - 20;
+            $($('.landing')[0]).height(dimensionalHeight);
 
             // var temp = $('.accent')
             // for (var idx in temp)
@@ -107,14 +130,27 @@
         $(window).on('scroll', function() {
 
         });
+
+        $(window).on('resize', function() {
+            var img = 'pulseFront.jpg';
+            var dimensions = getNativeDimensions(img);
+
+            var aspectRatio = dimensions.height/dimensions.width;
+            var windowHeight = $(window).height();
+            var windowWidth = $(window).width();
+
+            dimensionalHeight = windowWidth * aspectRatio;
+            dimensionalHeight = dimensionalHeight - 20 > windowHeight ? windowHeight - 20 : dimensionalHeight - 20;
+            $($('.landing')[0]).height(dimensionalHeight);
+        })
     </script>
 </head>
 
 <body>
     <div class="homepage">
-        <div class="col-md-12 landing">
-            <span class="col-md-12 label">ECE PULSE 2016</span>
-            <span class="col-md-12 caption">The heartbeat of innovation</span>
+        <div class="col-md-12 col-lg-12 col-sm-12 landing">
+            <span class="col-md-12 col-lg-12 col-sm-12 label">ECE PULSE 2016</span><br/>
+            <span class="col-md-12 col-lg-12 col-sm-12 caption">The heartbeat of innovation</span>
         </div>
     </div>
     <div class="about_us col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 ">
@@ -140,7 +176,16 @@
                 We encourage attendees to challenge themselves. Step out of your comfort zone. Meet new people. Learn from the best. Build teams. Collaborate.</div>
         </div>
     </div>
-    <div class=" col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+    <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
         <div class="divider"></div>
     </div>
+
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+        <img src="videoPlaceholder.png" class="placeholder"/>
+    </div>
+    <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+        <div class="divider"></div>
+    </div>
+    
+
 </body>
