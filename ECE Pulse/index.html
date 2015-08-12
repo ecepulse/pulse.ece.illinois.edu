@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+    <title>ECE Pulse 2015</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+
+        body {
+            background-color: #F5F5F5;
+            font-family: 'Avenir';
+        }
+        .landing {            
+            background-color: inherit;
+            background: linear-gradient(
+                          rgba(1,53,103,0.85), 
+                          rgba(1,53,103,0.85)
+                        ), 
+            url('pulseFront.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 700px;
+            margin-bottom: 30px;
+        }
+
+        .label {
+            letter-spacing: -2px;
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+            font-size: 4em;
+        }
+
+        .caption {
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+
+        }
+
+        .box {
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+        }
+
+        .box > .header {
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-family: 'Raleway', sans-serif;
+
+        }
+
+        .box > .blurb {
+            font-size: 1.2em;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient( to right, 
+                rgba(1,53,103,0), 
+                rgba(1,53,103,0.40), 
+                rgba(1,53,103,0));
+            margin: 40px 0;
+
+        }
+
+    </style>
+    <script>
+        $(document).on('ready', function() {
+            var height = $(window).height() - 20;
+            $($('.landing')[0]).height(height);
+
+            // var temp = $('.accent')
+            // for (var idx in temp)
+            // {
+            //     var html = $(temp[idx]).html();
+            //     if (html == undefined) continue;
+            //     var split = html.split(' ');
+            //     for (var i = 0; i < split.length; i++)
+            //     {
+            //         split[i] = split[i].trim();
+            //         if (split[i].length == 0) continue;
+            //         var firstLetter = split[i].substring(0, 1);
+            //         firstLetter = "<span class='letterAccent'>" + firstLetter + '</span>';
+            //         split[i] = firstLetter + split[i].substring(2);
+            //     }
+
+            //     var newHtml = '';
+            //     for (var j = 0; j < split.length; j++)
+            //     {
+            //         newHtml += split[j] + ' ';
+            //     }
+            //     $(temp[idx]).html(newHtml);
+            // }
+        });
+
+        $(window).on('scroll', function() {
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="homepage">
+        <div class="col-md-12 landing">
+            <span class="col-md-12 label">ECE PULSE 2016</span>
+            <span class="col-md-12 caption">The heartbeat of innovation</span>
+        </div>
+    </div>
+    <div class="about_us col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 ">
+        <div class="col-sm-12 col-md-6 col-lg-4 box">
+            <div class="header accent">
+                One week of innovation.
+            </div>
+            <div class="blurb">
+                ECE Pulse is an annual student-run conference held at UIUC which showcases innovation in electrical and computer engineering technologies. The conference is comprised of design competitions, tech talks, and networking sessions for students, alumni, faculty, and corporate representatives.</div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 box">
+            <div class="header accent">
+                Infinite opportunities.
+            </div>
+            <div class="blurb">
+                Our aim is to inspire students by connecting them with the latest in novel technologies and projects in the corporate world, exposing them to new opportunities for ECE within industry. Engineers from leading tech companies will engage attendees in discussions regarding the latest and greatest in ECE innovation.</div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 box">
+            <div class="header accent">
+                Engage. Network. Innovate.
+            </div>
+            <div class="blurb">
+                We encourage attendees to challenge themselves. Step out of your comfort zone. Meet new people. Learn from the best. Build teams. Collaborate.</div>
+        </div>
+    </div>
+    <div class=" col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+        <div class="divider"></div>
+    </div>
+</body>
