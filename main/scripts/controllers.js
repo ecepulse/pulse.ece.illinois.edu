@@ -26,3 +26,10 @@ ecePulse2016.controller('splashPage', function ($scope) {
             }
         }];
 });
+
+ecePulse2016.directive('splashHeader', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'templates/header.html'
+    };
+});

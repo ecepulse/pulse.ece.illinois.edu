@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+}
+
+.landing > .label {
+    letter-spacing: -2px;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    font-size: 7vw;
+}
+
+.landing > .caption {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    font-size: 3vw;
+
+}
