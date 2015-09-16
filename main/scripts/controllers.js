@@ -18,10 +18,10 @@ ecePulse2016.controller('splashPage', function ($scope) {
     $scope.sponsors = [
         {
             "resting": {
-                "imgLink": "assets/sponsors/TI.jpg",
+                "imgLink": "/assets/sponsors/TI.jpg",
             },
             "onHover": {
-                "imgLink": "assets/sponsor/TIhover.jpg",
+                "imgLink": "/assets/sponsor/TIhover.jpg",
                 "title": "Texas Instruments",
             }
         }];
