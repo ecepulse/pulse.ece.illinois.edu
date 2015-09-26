@@ -1,8 +1,14 @@
 var ecePulse2016 = angular.module("ECEPulse2016", []);
 
-ecePulse2016.controller('splashPage', function ($scope) {
+ecePulse2016.controller('splashPage', ['$scope', function ($scope) {
     "use strict"; // To detect any coding errors
     
+    $scope.header = {
+        "header": "ECE Pulse 2016",
+        "caption": "The heartbeat of innovation",
+        "verticalPercentage": "90%",
+    };
+
     $scope.infoCards = [
         {
             "title": "One week of innovation.",
@@ -25,11 +31,15 @@ ecePulse2016.controller('splashPage', function ($scope) {
                 "title": "Texas Instruments",
             }
         }];
-});
+
+}]);
 
 ecePulse2016.directive('splashHeader', function () {
     return {
         restrict: 'E',
+        scope: {
+            info: "=info",
+        },
         templateUrl: 'templates/header.html'
     };
 });
