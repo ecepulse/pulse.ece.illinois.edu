@@ -5,7 +5,8 @@
 }
 
 .landing > .label,
-.landing > .caption {
+.landing > .caption,
+.landing > .automateYour_ {
     width: 100%;
     position: relative;
     text-align: center;
@@ -19,9 +20,20 @@
     font-size: 3vmax;
 }
 
+.landing > .automateYour_ {
+    font-size: 2vmax;
+}
+
 .aboutCard > .header {
     font-weight: bold;
     font-size: 1.5em;
+    text-decoration: underline;
+/*
+    border-width: 0px 0px 1px 0px;
+    border-color: #DE592B;
+    border-style: solid;
+*/
+    vertical-align: text-bottom;
 }
 
 .aboutCard > .content {
@@ -43,10 +55,6 @@
     margin-bottom: 10px;
 }
 
-.sponsorCard {
-    height: 30%;
-}
-
 .tempt {
     width: 90px;
     height: 90px;
@@ -57,4 +65,28 @@
     bottom: -85%;
     cursor: pointer;
     background-image: url('../assets/down.png');
+}
+
+.sponsors {
+    margin-top: 50px;
+}
+
+.sponsors > .header {
+    margin-bottom:50px;
+}
+
+.sponsorImg {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    width: 100%;
+    height: 100%;
+}
+
+.sponsorImg:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.sponsorLink {
+    margin: auto;
 }

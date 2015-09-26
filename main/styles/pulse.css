@@ -22,7 +22,7 @@ body, html {
 
 .valign {
   position: relative;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
 }
 
@@ -30,3 +30,19 @@ body, html {
     float: left;
 }
 
+.fancyHeader {
+    font-weight: bold;
+    color: #DE592B;
+    font-size: 1.5em;
+    text-decoration: underline;
+    border-width: 0px 0px 1px 0px;
+    border-color: #DE592B;
+    border-style: solid;
+    vertical-align: text-bottom;
+}
+
+.link:hover,
+.link:visited,
+.link:active {
+    color: inherit;
+}

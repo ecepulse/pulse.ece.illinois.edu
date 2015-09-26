@@ -1,6 +1,6 @@
 var ecePulse2016 = angular.module("ECEPulse2016", []);
 
-ecePulse2016.controller('splashPage', ['$scope', function ($scope) {
+ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
     "use strict"; // To detect any coding errors
     
     $scope.header = {
@@ -23,17 +23,91 @@ ecePulse2016.controller('splashPage', ['$scope', function ($scope) {
     }];
     
     $scope.sponsors = [
-        {
-            "resting": {
-                "imgLink": "/assets/sponsors/microsoft.png"
+        [
+            {
+                "imgLink": "./assets/sponsors/microsoft.png",
+                "title": "Microsoft",
+                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
             },
-            "onhover": {
-                "imgLink": "/assets/sponsors/microsoftHover.png",
-                "title": "Microsoft"
+            {
+                "imgLink": "./assets/sponsors/northfolkSouthern.png",
+                "title": "Northfolk Southern",
+                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
+            }
+        ]
+    ];
+    
+    $scope.scrollTo = function(section) {
+        var aboutDiv = $('.' + section);
+        $location.hash(section);
+        $anchorScroll();
+    }
+
+    angular.element(document).ready(function () {
+        var interval = window.setInterval(hackertyper, 5000);
+    });
+    
+    function sleepFor( sleepDuration ) {
+        var now = new Date().getTime();
+        while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
+    }
+    
+    var lock = 0;
+    
+    function hackertyper() {
+        
+        if (lock == 1) return;
+        lock = 1;
+        var endings = ["_life", 
+                         "_kitchen", 
+                         "_roads", 
+                         "_school", 
+                         "_business", 
+                         "_world", 
+                         "_work"];
+        
+        var hacker = $('.hackertyper');
+        var newRand = hacker.html();
+        
+        while (newRand === hacker.html()) newRand = endings[Math.floor(Math.random() * endings.length)];
+        
+        var cache = hacker.html().length;
+        var i = 0;
+        var addCallbackId, removeCallbackId;
+        
+        var removeCallback = function() {
+            
+            if (i >= cache) {
+                window.clearInterval(removeCallbackId);
+                i = 0;
+                addCallbackId = window.setInterval(addCallback, 200);
+            }
+            for (; i < cache; i++) {
+                hacker.html(hacker.html().substr(0, hacker.html().length - 1));
+                i++;
+                return;
+                //sleepFor(600);
+            }
+            
+
+        }
+    
+        removeCallbackId = window.setInterval(removeCallback, 200);
+        
+        var addCallback = function() {
+            if (i >= newRand.length) {
+                window.clearInterval(addCallbackId);
+                lock = 0;
+            }
+            for (; i < newRand.length; i++) {
+                hacker.html(hacker.html() + newRand[i]);
+                i++;
+                return;
+                //sleepFor(600);
             }
         }
-    ];
-
+    }
+    
 }]);
 
 ecePulse2016.directive('splashHeader', function () {
