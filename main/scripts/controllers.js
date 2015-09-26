@@ -4,9 +4,10 @@ ecePulse2016.controller('splashPage', ['$scope', function ($scope) {
     "use strict"; // To detect any coding errors
     
     $scope.header = {
-        "header": "ECE Pulse 2016",
+        "header": "ECE PULSE 2016",
         "caption": "The heartbeat of innovation",
         "verticalPercentage": "90%",
+        "background-image": "/main/assets/header_backgrounds/splash.jpg",
     };
 
     $scope.infoCards = [
