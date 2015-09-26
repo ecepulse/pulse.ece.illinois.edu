@@ -12,16 +12,20 @@
 }
 
 .landing > .label {
-    font-size: 5vw;
+    font-size: 5vmax;
 }
 
 .landing > .caption { 
-    font-size: 3vw;
+    font-size: 3vmax;
 }
 
 .aboutCard > .header {
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.5em;
+}
+
+.aboutCard > .content {
+    font-size: 1.2em;
 }
 
 .about {
@@ -32,4 +36,25 @@
     margin-top: 10%;
     margin-bottom: 10%;
     font-size: 1.4em;
+}
+
+.aboutCard {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sponsorCard {
+    height: 30%;
+}
+
+.tempt {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    z-index: 9999;
+    background-size: 100%;
+    position: relative;
+    bottom: -85%;
+    cursor: pointer;
+    background-image: url('../assets/down.png');
 }
