@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+    <title>ECE PULSE 2016</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+    <style>
+        
+        body {
+            color: white;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .polyline {
+                z-index: -9999;
+                position: relative;
+                background-color: inherit;
+                background: linear-gradient(
+                              rgba(1,53,103,0.95), 
+                              rgba(1,53,103,0.95)
+                            ), 
+                url('pulseFront.JPG');
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+        .first {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .header, .description, .cycle {
+            position: fixed;
+            float: left;
+            font-size: 30px;
+        }
+
+        .orange {
+            color: #DE592B;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <p class="header">ECE <span class="orange">PULSE</span> 2016</p>
+        <p class="description">The heartbeat of innovation</p>
+        <p class="cycle">Automate your <span class="orange rotation">world</span></p>
+        <svg class="polyline">
+          <polyline class="pulse" points="" style="stroke-width: 2; stroke:#ff6a41" fill="rgba(255, 255, 255, 0)"/>
+        </svg>
+    </div>
+    <div class="second">
+        
+    </div>
+</body>
+
+<script>
+    var automateWords = ["life", 
+                         "kitchen", 
+                         "roads", 
+                         "school", 
+                         "business", 
+                         "world", 
+                         "work"];
+
+    var pulsePoints = [[0,250], 
+                       [50,250], 
+                       [50,200], 
+                       [60,190], 
+                       [60,300], 
+                       [70,310], 
+                       [70,160], 
+                       [80,150], 
+                       [80,280], 
+                       [90,270], 
+                       [90,210], 
+                       [100,220], 
+                       [100,250], 
+                       [500,250]];
+    
+    function floatAbovePolyline()
+    {
+        var midpoint = 50;
+        var toFloat = [$('.cycle'),
+                       $('.header')];
+
+        padding = 30;
+
+        for (var i = 0; i < toFloat.length; i++)
+        {
+            var windowHeight = $(window).height();
+            windowHeight /= 2;
+            var boxHeight = toFloat[i].height();
+            windowHeight -= boxHeight/2 + boxHeight/2;
+            toFloat[i].css({ 'top': windowHeight + 'px' });
+        }
+    }
+    
+    function floatBelowPolyline()
+    {
+        var midpoint = 50;
+        var toFloat = [$('.description')];
+
+        padding = -30;
+
+        for (var i = 0; i < toFloat.length; i++)
+        {
+            var windowHeight = $(window).height();
+            windowHeight /= 2;
+            var boxHeight = toFloat[i].height();
+            windowHeight -= boxHeight/2 - boxHeight/2;
+            toFloat[i].css({ 'top': windowHeight + 'px' });
+        }
+    }
+    
+    function drawPolyline(points)
+    {
+        var polylineHeight = $(window).height();
+        var polylineWidth = $(window).width();
+        var polyline = $('.polyline');
+        var pulse = $('.pulse');
+        var baselineHeight = 500;
+        var baselineWidth = 500;
+
+        polyline.height(polylineHeight);
+        polyline.width(polylineWidth);
+
+        var newPoints = "";
+
+        for (var i = 0; i < points.length; i++)
+        {
+            var newPulseWidth = (points[i][0]/baselineWidth) * polylineWidth;
+            var newPulseHeight = (points[i][1]/baselineHeight) * polylineHeight;
+            newPoints += String(newPulseWidth) + "," + String(newPulseHeight) + " ";
+        }
+
+        pulse.attr('points', newPoints);
+    }
+    
+    function automate() 
+    {
+        var newIndex = Math.floor(Math.random() * automateWords.length);
+
+        var rotation = $('.rotation');
+        rotation.html(automateWords[newIndex]);
+    }
+    
+    $(window).on('resize', function() {
+        drawPolyline(pulsePoints);
+        floatAbovePolyline();
+        floatBelowPolyline();
+    })
+    drawPolyline(pulsePoints);
+    floatAbovePolyline();
+    floatBelowPolyline();
+    window.setInterval(automate, 5000);
+</script>
