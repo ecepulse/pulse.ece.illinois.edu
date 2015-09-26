@@ -25,13 +25,14 @@ ecePulse2016.controller('splashPage', ['$scope', function ($scope) {
     $scope.sponsors = [
         {
             "resting": {
-                "imgLink": "/assets/sponsors/TI.jpg",
+                "imgLink": "/assets/sponsors/microsoft.png"
             },
-            "onHover": {
-                "imgLink": "/assets/sponsor/TIhover.jpg",
-                "title": "Texas Instruments",
+            "onhover": {
+                "imgLink": "/assets/sponsors/microsoftHover.png",
+                "title": "Microsoft"
             }
-        }];
+        }
+    ];
 
 }]);
 

@@ -24,7 +24,7 @@
 -->
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 caption white valign">{{header.caption}}</div>
     </div>
-    <div class="about col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-1 col-xs-10 col-xs-1">
+    <div class="about col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <div class="mainAbout col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <p>ECE Pulse is an annual student-run conference held at Illinois that showcases innovation in electrical and computer engineering technologies. The conference is comprised of design competitions, hands-on workshops, tech talks, and networking sessions for students, alumni, faculty, and corporate representatives. Our aim is to inspire students by connecting them with cutting-edge technologies and innovative projects in the corporate world. This year's theme—Automate your World—will focus on showing attendees how our world is evolving to become more connected and collaborative everyday.</p>
         </div>
@@ -33,9 +33,17 @@
             <div class="content">{{card.info}}</div>
         </div>
     </div>
+    <div class="sponsors col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+        <div ng-repeat="sponsor in sponsors">
+            <div data-title="{{sponsor.onhover.title}}">
+                <div class="sponsorImg" data-resting="{{sponsor.resting.imgLink}}" data-hover="{{sponsor.onhover.imgLink}}" />
+            </div>
+        </div>
+    </div>
 </body>
     
 </html>
 
 <script src="scripts/landing.js"></script>
 <script src="scripts/polyline.js"></script>
+<script src="scripts/sponsor.js"></script>
