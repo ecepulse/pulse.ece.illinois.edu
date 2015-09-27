@@ -27,7 +27,7 @@
 .aboutCard > .header {
     font-weight: bold;
     font-size: 1.5em;
-    text-decoration: underline;
+    margin-bottom: 10px;
 /*
     border-width: 0px 0px 1px 0px;
     border-color: #DE592B;

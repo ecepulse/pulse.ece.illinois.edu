@@ -26,6 +26,11 @@ body, html {
   transform: translateY(-50%);
 }
 
+.svalign {
+  position: relative;
+  transform: translateY(50%);
+}
+
 .float_left {
     float: left;
 }
@@ -45,4 +50,17 @@ body, html {
 .link:visited,
 .link:active {
     color: inherit;
+}
+
+.navbar {
+    list-style-type: none;
+}
+
+.navbar > li {
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 150%;
+    float: left;
+    width: auto;
 }
