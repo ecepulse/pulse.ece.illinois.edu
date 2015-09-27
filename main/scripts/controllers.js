@@ -39,8 +39,10 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     
     $scope.scrollTo = function(section) {
         var aboutDiv = $('.' + section);
-        $location.hash(section);
-        $anchorScroll();
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(aboutDiv).offset().top}, 1000);
+//        $location.hash(section);
+//        $anchorScroll();
     }
 
     angular.element(document).ready(function () {

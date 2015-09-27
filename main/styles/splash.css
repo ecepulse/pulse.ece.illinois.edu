@@ -14,14 +14,25 @@
 
 .landing > .label {
     font-size: 5vmax;
+    line-height: 0.8;
 }
 
 .landing > .caption { 
     font-size: 3vmax;
+    margin-top: -10px;
 }
 
 .landing > .automateYour_ {
     font-size: 2vmax;
+}
+
+.landing > .dates {
+    position: relative;
+    top: 60%;
+}
+
+.dates > .bracket {
+    width: auto;
 }
 
 .aboutCard > .header {
@@ -99,4 +110,8 @@
     margin-top: 20px;
     color: white;
     text-align: center;
+}
+
+.preregister {
+    margin-top: 50px;
 }

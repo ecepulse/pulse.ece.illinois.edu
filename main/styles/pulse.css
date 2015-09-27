@@ -75,12 +75,17 @@ body, html {
 .navbar > li,
 .navbar_wrapper > li{
     cursor: pointer;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 150%;
     float: left;
     width: auto;
     font-size: 1.2em;
+}
+
+.navbar_wrapper > .current {
+    color: #013567;
+    font-weight: bold;
 }
 
 ul {
