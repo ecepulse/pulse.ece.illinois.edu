@@ -56,11 +56,23 @@ body, html {
     list-style-type: none;
 }
 
-.navbar > li {
+.navbar_wrapper {
+    margin: auto;
+    left: 0;
+}
+
+.navbar > li,
+.navbar_wrapper > li{
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
     height: 150%;
     float: left;
     width: auto;
+    font-size: 1.2em;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
 }

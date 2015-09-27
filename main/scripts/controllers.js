@@ -45,6 +45,18 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', f
 
     angular.element(document).ready(function () {
         var interval = window.setInterval(hackertyper, 5000);
+        var navbar_item = $('.navbar_item');
+        var width = 0;
+        var screenWidth = $(window).width();
+        
+        for (var i = 0; i < navbar_item.length; i++) {
+            width += $(navbar_item[i]).width() + 20;
+        }
+        
+//        var marginLeft = screenWidth/2 - width/2;
+        
+        $('.navbar_wrapper').width(width);
+//        $('.navbar_wrapper').css('margin-left', margin
     });
     
     function sleepFor( sleepDuration ) {
