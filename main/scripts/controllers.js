@@ -1,6 +1,6 @@
 var ecePulse2016 = angular.module("ECEPulse2016", []);
 
-ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
+ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '$window', function ($scope, $location, $anchorScroll, $window) {
     "use strict"; // To detect any coding errors
     
     $scope.header = {
@@ -53,16 +53,41 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', f
             width += $(navbar_item[i]).width() + 20;
         }
         
-//        var marginLeft = screenWidth/2 - width/2;
+        var marginLeft = screenWidth/2 - width/2;
         
         $('.navbar_wrapper').width(width);
 //        $('.navbar_wrapper').css('margin-left', margin
+    });
+    
+    angular.element($window).bind('scroll', function(e) {
+        var landing = $('.landing');
+        
+        var navbar_item = $('.navbar_item');
+        var about = $('.about');
+        var width = 0;
+        var screenWidth = $(window).width();
+        
+        for (var i = 0; i < navbar_item.length; i++) {
+            width += $(navbar_item[i]).width() + 20;
+        }
+        
+        if ($(window).scrollTop() >= landing.height()) {
+//            about.css('margin-top', $('.navbar').height());
+            $('.navbar').css('position', 'fixed');
+            $('.navbar').css('top', '0'); 
+//            $('.navbar').css('left', screenWidth/2 - width/2 + 14 + 'px');
+        } else {
+            $('.navbar').css('position', 'initial');
+            $('.navbar').css('top', '0');
+            $('.navbar').css('transform', '');
+        }
     });
     
     function sleepFor( sleepDuration ) {
         var now = new Date().getTime();
         while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
     }
+    
     
     var lock = 0;
     

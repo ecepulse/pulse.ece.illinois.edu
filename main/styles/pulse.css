@@ -54,6 +54,9 @@ body, html {
 
 .navbar {
     list-style-type: none;
+    z-index: 9999;
+    background: white;
+    width: 100%;
 }
 
 .navbar_wrapper {
