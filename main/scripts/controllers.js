@@ -46,7 +46,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     }
 
     angular.element(document).ready(function () {
-        var interval = window.setInterval(hackertyper, 5000);
+        var interval = window.setInterval(hackertyper, 3000);
         var navbar_item = $('.navbar_item');
         var width = 0;
         var screenWidth = $(window).width();
