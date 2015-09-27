@@ -50,6 +50,8 @@ body, html {
     border-color: #DE592B;
     border-style: solid;
     vertical-align: text-bottom;
+    border-spacing: 0;
+    line-height: 1.0;
 }
 
 .link:hover,
