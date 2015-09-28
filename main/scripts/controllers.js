@@ -73,12 +73,16 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
             width += $(navbar_item[i]).width() + 20;
         }
         
+        console.log($('.navbar').height());
+        console.log("Here");
+        
         if ($(window).scrollTop() >= landing.height()) {
-//            about.css('margin-top', $('.navbar').height());
+            about.css('margin-top', $('.navbar').outerHeight());
             $('.navbar').css('position', 'fixed');
             $('.navbar').css('top', '0'); 
 //            $('.navbar').css('left', screenWidth/2 - width/2 + 14 + 'px');
         } else {
+            about.css('margin-top', 0);
             $('.navbar').css('position', 'initial');
             $('.navbar').css('top', '0');
             $('.navbar').css('transform', '');
