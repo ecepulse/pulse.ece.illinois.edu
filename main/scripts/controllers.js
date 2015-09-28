@@ -23,18 +23,18 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     }];
     
     $scope.sponsors = [
-        [
-            {
-                "imgLink": "./assets/sponsors/microsoft.png",
-                "title": "Microsoft",
-                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
-            },
-            {
-                "imgLink": "./assets/sponsors/northfolkSouthern.png",
-                "title": "Northfolk Southern",
-                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
-            }
-        ]
+//        [
+//            {
+//                "imgLink": "./assets/sponsors/microsoft.png",
+//                "title": "Microsoft",
+//                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
+//            },
+//            {
+//                "imgLink": "./assets/sponsors/northfolkSouthern.png",
+//                "title": "Northfolk Southern",
+//                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
+//            }
+//        ]
     ];
     
     $scope.scrollTo = function(section) {
@@ -72,9 +72,6 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
         for (var i = 0; i < navbar_item.length; i++) {
             width += $(navbar_item[i]).width() + 20;
         }
-        
-        console.log($('.navbar').height());
-        console.log("Here");
         
         if ($(window).scrollTop() >= landing.height()) {
             about.css('margin-top', $('.navbar').outerHeight());
