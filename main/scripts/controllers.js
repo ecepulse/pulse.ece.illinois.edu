@@ -29,12 +29,13 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
                 "title": "Microsoft",
                 "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
             },
-            {
-                "imgLink": "./assets/sponsors/northfolkSouthern.png",
-                "title": "Northfolk Southern",
-                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
-            }
         ]
+//            {
+//                "imgLink": "./assets/sponsors/northfolkSouthern.png",
+//                "title": "Northfolk Southern",
+//                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
+//            }
+//        ]
     ];
     
     $scope.scrollTo = function(section) {
@@ -45,6 +46,52 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
 //        $anchorScroll();
     }
 
+    angular.element(document).ready(function () {
+        var interval = window.setInterval(hackertyper, 5000);
+        var navbar_item = $('.navbar_item');
+        var width = 0;
+        var screenWidth = $(window).width();
+        
+        for (var i = 0; i < navbar_item.length; i++) {
+            width += $(navbar_item[i]).width() + 20;
+        }
+        
+        var marginLeft = screenWidth/2 - width/2;
+        
+        $('.navbar_wrapper').width(width);
+//        $('.navbar_wrapper').css('margin-left', margin
+    });
+    
+    angular.element($window).bind('scroll', function(e) {
+        var landing = $('.landing');
+        
+        var navbar_item = $('.navbar_item');
+        var about = $('.about');
+        var width = 0;
+        var screenWidth = $(window).width();
+        
+        for (var i = 0; i < navbar_item.length; i++) {
+            width += $(navbar_item[i]).width() + 20;
+        }
+        
+        if ($(window).scrollTop() >= landing.height()) {
+            about.css('margin-top', $('.navbar').outerHeight());
+            $('.navbar').css('position', 'fixed');
+            $('.navbar').css('top', '0'); 
+//            $('.navbar').css('left', screenWidth/2 - width/2 + 14 + 'px');
+        } else {
+            about.css('margin-top', 0);
+            $('.navbar').css('position', 'initial');
+            $('.navbar').css('top', '0');
+            $('.navbar').css('transform', '');
+        }
+    });
+    
+    function sleepFor( sleepDuration ) {
+        var now = new Date().getTime();
+        while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
+    }
+    
     var lock = 0;
     
     function hackertyper() {
