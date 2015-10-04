@@ -197,6 +197,12 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     
 }]);
 
+ecePulse2016.controller('sponsorPage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
+    "use strict";
+    
+    
+}]);
+
 ecePulse2016.directive('splashHeader', function () {
     return {
         restrict: 'E',
