@@ -29,12 +29,12 @@ function center_navbar() {
     var screenWidth = $(window).width();
 
     for (var i = 0; i < navbar_item.length; i++) {
-        width += $(navbar_item[i]).width() + 20;
+        width += $(navbar_item[i]).outerWidth();
     }
 
     var marginLeft = screenWidth/2 - width/2;
 
-    $('.navbar_wrapper').width(width);
+    $('.navbar_wrapper').css("margin-left", marginLeft);
 }
 
 function fixLandingVerticalPercentage() {
@@ -175,6 +175,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
         center_navbar();
     });
     
+    angular.element($window).bind('resize', center_navbar);
     angular.element($window).bind('scroll', navbar_scroll);
 
     
@@ -194,6 +195,8 @@ ecePulse2016.controller('sponsorPage', ['$scope', '$location', '$anchorScroll', 
     });
     
     angular.element($window).bind('scroll', navbar_scroll);
+    angular.element($window).bind('resize', center_navbar);
+
 }]);
 
 
