@@ -4,6 +4,7 @@ function navbar_scroll(e) {
     var landing = $('.landing');
 
     var navbar_item = $('.navbar_item');
+    var trueHeight = $('.navbar').outerHeight() + 20;
     var about = $('.about');
     var width = 0;
     var screenWidth = $(window).width();
@@ -16,13 +17,17 @@ function navbar_scroll(e) {
 //            about.css('margin-top', $('.navbar').height());
         $('.navbar').css('position', 'fixed');
         $('.navbar').css('top', '0'); 
+        $('.landing').css('margin-bottom', trueHeight + 'px');
 //            $('.navbar').css('left', screenWidth/2 - width/2 + 14 + 'px');
     } else {
         $('.navbar').css('position', 'initial');
         $('.navbar').css('top', '0');
         $('.navbar').css('transform', '');
+        $('.landing').css('margin-bottom', '0' + 'px');
+
     }
 }
+
 function center_navbar() {
     var navbar_item = $('.navbar_item');
     var width = 0;
