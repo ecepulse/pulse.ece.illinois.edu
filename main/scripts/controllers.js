@@ -54,6 +54,8 @@ function fixLandingVerticalPercentage() {
 ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '$window', function ($scope, $location, $anchorScroll, $window) {
     "use strict"; // To detect any coding errors
     
+    $scope.navbarActive = "Schedule";
+    
     $scope.header = {
         "header": "ECE PULSE 2016",
         "caption": "The heartbeat of innovation",
@@ -191,8 +193,10 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     
 }]);
 
-ecePulse2016.controller('sponsorPage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
+ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
     "use strict";
+    
+    $scope.navbarActive = "Schedule";
     
     $scope.header = {
         "header": "Schedule",
@@ -209,6 +213,23 @@ ecePulse2016.controller('sponsorPage', ['$scope', '$location', '$anchorScroll', 
 
 }]);
 
+ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
+    
+    $scope.navbarActive = "Contact"
+    $scope.header = {
+        "header": "Contact",
+        "verticalPercentage": "85%"
+    };
+    
+    angular.element(document).ready(function() {
+        fixLandingVerticalPercentage();
+        center_navbar();
+    });
+    
+    angular.element($window).bind('scroll', navbar_scroll);
+    angular.element($window).bind('resize', center_navbar);
+}]);
+
 
 ecePulse2016.directive('splashHeader', function () {
     return {
@@ -218,4 +239,31 @@ ecePulse2016.directive('splashHeader', function () {
         },
         templateUrl: 'templates/header.html'
     };
+});
+
+ecePulse2016.directive('navbar', function() {
+    return {
+        controller: function() {
+            
+            angular.element(document).ready(function() {
+                center_navbar();
+            });
+        },
+        compile: function() {
+            return {
+                pre: function() {
+                },
+                post: function() {
+                }
+            }
+        },
+        "post-link": function() {
+            center_navbar();
+        },
+        restrict: 'E',
+        scope: {
+            active: "=active",
+        },
+        templateUrl: 'templates/navbar.html'
+    }
 });

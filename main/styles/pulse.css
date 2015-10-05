@@ -91,3 +91,29 @@ ul {
     padding: 0;
     margin: 0;
 }
+
+.navbar_item:hover {
+    color: #DE592B;
+    text-decoration: underline;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.current:hover { 
+    cursor: default !important;
+    color: #013567 !important;
+    text-decoration: none !important;
+}
+
+.current > a:link,
+.current > a:hover,
+.current > a:visited,
+.current > a:active {   
+    cursor: default;
+}

@@ -2,19 +2,22 @@
 <html ng-app="ECEPulse2016">
 <head>
     <title>
-        ECE Pulse Schedule
+        ECE Pulse 2016
     </title>    
     <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="styles/schedule.css" />
     <link rel="stylesheet" href="styles/splash.css" />
     <link rel="stylesheet" href="styles/pulse.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 </head>
     
-<body ng-controller="schedulePage">
-    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 landing">
+<body ng-controller="contactPage">
+    
+    <div class="col-md-12 col-lg-12 col-sm-12 landing">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 label orange valign" data-verticalPercentage="{{header.verticalPercentage}}">{{header.header}}</div>
     </div>
+        
+    <!-- Navbar -->
     <navbar active="navbarActive"></navbar>
     
     <script src="scripts/lib/angular.min.js"></script>
@@ -25,6 +28,5 @@
     <script src="scripts/landing.js"></script>
     <script src="scripts/polyline.js"></script>
     <script src="scripts/sponsor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </body>
-    
-</html>
