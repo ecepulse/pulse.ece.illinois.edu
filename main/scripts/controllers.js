@@ -37,6 +37,14 @@ function center_navbar() {
     $('.navbar_wrapper').width(width);
 }
 
+function fixLandingVerticalPercentage() {
+    var label = $('.label');
+    var landing = $('.landing');
+    var percentage = label.attr('data-verticalPercentage');
+
+    landing.css('height', percentage);
+}
+
 ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '$window', function ($scope, $location, $anchorScroll, $window) {
     "use strict"; // To detect any coding errors
     
@@ -64,12 +72,12 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
             {
                 "imgLink": "./assets/sponsors/microsoft.png",
                 "title": "Microsoft",
-                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
+                "layout": "col-md-4 col-sm-6 col-xs-10 col-xs-offset-1 col-lg-3"
             },
             {
                 "imgLink": "./assets/sponsors/northfolkSouthern.png",
                 "title": "Northfolk Southern",
-                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
+                "layout": "col-md-4 col-sm-6 col-xs-10 col-xs-offset-1 col-lg-3"
             }
         ]
     ];
@@ -95,6 +103,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
         var marginLeft = screenWidth/2 - width/2;
         
         $('.navbar_wrapper').width(width);
+        fixLandingVerticalPercentage();
 //        $('.navbar_wrapper').css('margin-left', margin
     });
     
@@ -180,11 +189,7 @@ ecePulse2016.controller('sponsorPage', ['$scope', '$location', '$anchorScroll', 
     };
     
     angular.element(document).ready(function() {
-        var label = $('.label');
-        var landing = $('.landing');
-        var percentage = label.attr('data-verticalPercentage');
-        
-        landing.css('height', percentage);
+        fixLandingVerticalPercentage();
         center_navbar();
     });
     
