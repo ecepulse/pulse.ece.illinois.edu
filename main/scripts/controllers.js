@@ -18,13 +18,14 @@ function navbar_scroll(e) {
         $('.navbar').css('position', 'fixed');
         $('.navbar').css('top', '0'); 
         $('.landing').css('margin-bottom', trueHeight + 'px');
+        
 //            $('.navbar').css('left', screenWidth/2 - width/2 + 14 + 'px');
     } else {
         $('.navbar').css('position', 'initial');
         $('.navbar').css('top', '0');
         $('.navbar').css('transform', '');
         $('.landing').css('margin-bottom', '0' + 'px');
-
+        
     }
 }
 
