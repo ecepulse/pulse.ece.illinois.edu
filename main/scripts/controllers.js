@@ -1,5 +1,42 @@
 var ecePulse2016 = angular.module("ECEPulse2016", []);
 
+function navbar_scroll(e) {
+    var landing = $('.landing');
+
+    var navbar_item = $('.navbar_item');
+    var about = $('.about');
+    var width = 0;
+    var screenWidth = $(window).width();
+
+    for (var i = 0; i < navbar_item.length; i++) {
+        width += $(navbar_item[i]).width() + 20;
+    }
+
+    if ($(window).scrollTop() >= landing.height()) {
+//            about.css('margin-top', $('.navbar').height());
+        $('.navbar').css('position', 'fixed');
+        $('.navbar').css('top', '0'); 
+//            $('.navbar').css('left', screenWidth/2 - width/2 + 14 + 'px');
+    } else {
+        $('.navbar').css('position', 'initial');
+        $('.navbar').css('top', '0');
+        $('.navbar').css('transform', '');
+    }
+}
+function center_navbar() {
+    var navbar_item = $('.navbar_item');
+    var width = 0;
+    var screenWidth = $(window).width();
+
+    for (var i = 0; i < navbar_item.length; i++) {
+        width += $(navbar_item[i]).width() + 20;
+    }
+
+    var marginLeft = screenWidth/2 - width/2;
+
+    $('.navbar_wrapper').width(width);
+}
+
 ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '$window', function ($scope, $location, $anchorScroll, $window) {
     "use strict"; // To detect any coding errors
     
@@ -29,13 +66,12 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
                 "title": "Microsoft",
                 "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
             },
+            {
+                "imgLink": "./assets/sponsors/northfolkSouthern.png",
+                "title": "Northfolk Southern",
+                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
+            }
         ]
-//            {
-//                "imgLink": "./assets/sponsors/northfolkSouthern.png",
-//                "title": "Northfolk Southern",
-//                "layout": "col-md-4 col-sm-6 col-xs-10 col-lg-3"
-//            }
-//        ]
     ];
     
     $scope.scrollTo = function(section) {
@@ -62,30 +98,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
 //        $('.navbar_wrapper').css('margin-left', margin
     });
     
-    angular.element($window).bind('scroll', function(e) {
-        var landing = $('.landing');
-        
-        var navbar_item = $('.navbar_item');
-        var about = $('.about');
-        var width = 0;
-        var screenWidth = $(window).width();
-        
-        for (var i = 0; i < navbar_item.length; i++) {
-            width += $(navbar_item[i]).width() + 20;
-        }
-        
-        if ($(window).scrollTop() >= landing.height()) {
-            about.css('margin-top', $('.navbar').outerHeight());
-            $('.navbar').css('position', 'fixed');
-            $('.navbar').css('top', '0'); 
-//            $('.navbar').css('left', screenWidth/2 - width/2 + 14 + 'px');
-        } else {
-            about.css('margin-top', 0);
-            $('.navbar').css('position', 'initial');
-            $('.navbar').css('top', '0');
-            $('.navbar').css('transform', '');
-        }
-    });
+    angular.element($window).bind('scroll', navbar_scroll);
     
     function sleepFor( sleepDuration ) {
         var now = new Date().getTime();
@@ -150,58 +163,34 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
 
     angular.element(document).ready(function () {
         var interval = window.setInterval(hackertyper, 5000);
-        var navbar_item = $('.navbar_item');
-        var width = 0;
-        var screenWidth = $(window).width();
-        
-        for (var i = 0; i < navbar_item.length; i++) {
-            width += $(navbar_item[i]).width() + 20;
-        }
-        
-        var marginLeft = screenWidth/2 - width/2;
-        
-        $('.navbar_wrapper').width(width);
-//        $('.navbar_wrapper').css('margin-left', margin
+        center_navbar();
     });
     
-    angular.element($window).bind('scroll', function(e) {
-        var landing = $('.landing');
-        
-        var navbar_item = $('.navbar_item');
-        var about = $('.about');
-        var width = 0;
-        var screenWidth = $(window).width();
-        
-        for (var i = 0; i < navbar_item.length; i++) {
-            width += $(navbar_item[i]).width() + 20;
-        }
-        
-        if ($(window).scrollTop() >= landing.height()) {
-//            about.css('margin-top', $('.navbar').height());
-            $('.navbar').css('position', 'fixed');
-            $('.navbar').css('top', '0'); 
-//            $('.navbar').css('left', screenWidth/2 - width/2 + 14 + 'px');
-        } else {
-            $('.navbar').css('position', 'initial');
-            $('.navbar').css('top', '0');
-            $('.navbar').css('transform', '');
-        }
-    });
-    
-    function sleepFor( sleepDuration ) {
-        var now = new Date().getTime();
-        while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
-    }
-    
-    
+    angular.element($window).bind('scroll', navbar_scroll);
+
     
 }]);
 
 ecePulse2016.controller('sponsorPage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
     "use strict";
     
+    $scope.header = {
+        "header": "Schedule",
+        "verticalPercentage": "85%"
+    };
     
+    angular.element(document).ready(function() {
+        var label = $('.label');
+        var landing = $('.landing');
+        var percentage = label.attr('data-verticalPercentage');
+        
+        landing.css('height', percentage);
+        center_navbar();
+    });
+    
+    angular.element($window).bind('scroll', navbar_scroll);
 }]);
+
 
 ecePulse2016.directive('splashHeader', function () {
     return {
