@@ -64,16 +64,18 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     };
 
     $scope.infoCards = [
-        {
-            "title": "One week of innovation.",
-            "info": "ECE Pulse is an annual student-run conference held at UIUC which showcases innovation in electrical and computer engineering technologies. The conference is comprised of design competitions, tech talks, and networking sessions for students, alumni, faculty, and corporate representatives."
+        [{
+            "title": "Speakers.",
+            "info": "ECE Pulse will have speakers."
     }, {
-            "title": "Infinite opportunities.",
-            "info": "Our aim is to inspire students by connecting them with the latest in novel technologies and projects in the corporate world, exposing them to new opportunities for ECE within industry. Engineers from leading tech companies will engage attendees in discussions regarding the latest and greatest in ECE innovation.",
+            "title": "Competitions.",
+            "info": "Compete in various ECE related topics spanning from Signal Processing, Software, and many more.  Show off your knowledge and skills in ECE-related fields while having fun and winning prizes",
     }, {
-            "title": "Engage. Network. Innovate.",
-            "info": "We encourage attendees to challenge themselves. Step out of your comfort zone. Meet new people. Learn from the best. Build teams. Collaborate."
-    }];
+            "title": "Workshops.",
+            "info": "Learn something new with our workshops.  Some of our sponsors will be holding workshops in various topics."
+    }], [{
+        
+    }]];
     
     $scope.sponsors = [
         [
