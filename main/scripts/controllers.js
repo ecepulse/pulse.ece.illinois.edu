@@ -202,7 +202,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         var d = date.getDate();
         var m = date.getMonth() + 1;
         var y = date.getFullYear();
-        return '' + y + '-' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
+        return '' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d) + '-' + y;
     };
     
     $scope.formatTime = function(date) {
@@ -219,6 +219,15 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         "header": "Schedule",
         "verticalPercentage": "85%"
     };
+    
+    $window.counter = 0;
+    
+    $scope.colorCounter = function() {
+        
+        if ($window.counter++ % 2 == 1) {
+            return "lightOrange";
+        }
+    }
     
     $scope.schedule = [{
         "name": "Saturday",
