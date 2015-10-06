@@ -198,6 +198,14 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
 ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
     "use strict";
     
+    $scope.formatDate = function(date) {
+        var d = date.getDate();
+        var m = date.getMonth() + 1;
+        var y = date.getFullYear();
+        return '' + y + '-' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
+    }
+
+    
     $scope.navbarActive = "Schedule";
     
     $scope.header = {
@@ -208,93 +216,93 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
     $scope.schedule = [{
         "name": "Saturday",
         "events": [{
-            "date_start": new Date(2016, 1, 23, 10, 0),
-            "date_end": new Date(2016, 1, 23, 22, 0),
+            "date_start": new Date(2016, 0, 23, 10, 0),
+            "date_end": new Date(2016, 0, 23, 22, 0),
             "description": "Competitions kickoff!"
         }, {
-            "date_start": new Date(2016, 1, 23, 9, 30),
-            "date_end": new Date(2016, 1, 23, 10, 30),
+            "date_start": new Date(2016, 0, 23, 9, 30),
+            "date_end": new Date(2016, 0, 23, 10, 30),
             "description": "Breakfast"
         }, {
-            "date_start": new Date(2016, 1, 23, 12, 00),
-            "date_end": new Date(2016, 1, 23, 13, 00),
+            "date_start": new Date(2016, 0, 23, 12, 0),
+            "date_end": new Date(2016, 0, 23, 13, 0),
             "description": "Lunch"
         }, {
-            "date_start": new Date(2016, 1, 23, 17, 30),
-            "date_end": new Date(2016, 1, 23, 18, 30),
+            "date_start": new Date(2016, 0, 23, 17, 30),
+            "date_end": new Date(2016, 0, 23, 18, 30),
             "description": "Dinner"
         }]
     }, {
         "name": "Thursday",
-        "event": [{
-            "date_start": new Date(2016, 1, 28, 16, 30),
-            "date_end": new Date(2016, 1, 28, 17, 00),
+        "events": [{
+            "date_start": new Date(2016, 0, 28, 16, 30),
+            "date_end": new Date(2016, 0, 28, 17, 0),
             "description": "Registration"
         }, {
-            "date_start": new Date(2016, 1, 28, 17, 0),
-            "date_end": new Date(2016, 1, 28, 17, 30),
+            "date_start": new Date(2016, 0, 28, 17, 0),
+            "date_end": new Date(2016, 0, 28, 17, 30),
             "description": "Introductions"
         }, {
-            "date_start": new Date(2016, 1, 28, 17, 30),
-            "date_end": new Date(2016, 1, 28, 18, 45),
+            "date_start": new Date(2016, 0, 28, 17, 30),
+            "date_end": new Date(2016, 0, 28, 18, 45),
             "description": "Keynote Speaker and Q/A",
         }, {
-            "date_start": new Date(2016, 1, 28, 18, 45),
-            "date_end": new Date(2016, 1, 28, 20, 0),
-            "description": "Dinner"
+            "date_start": new Date(2016, 0, 28, 18, 45),
+            "date_end": new Date(2016, 0, 28, 20, 0),
+            "description": "Dinner",
         }]
     }, {
         "name": "Friday",
-        "event": [{
-            "date_start": new Date(2016, 1, 29, 17, 0),
-            "date_end": new Date(2016, 1, 29, 18, 0),
+        "events": [{
+            "date_start": new Date(2016, 0, 29, 17, 0),
+            "date_end": new Date(2016, 0, 29, 18, 0),
             "description": "Tech Talk #1"
         }, {
-            "date_start": new Date(2016, 1, 29, 18, 0),
-            "date_end": new Date(2016, 1, 29, 18, 30),
+            "date_start": new Date(2016, 0, 29, 18, 0),
+            "date_end": new Date(2016, 0, 29, 18, 30),
             "description": "Dinner"
         }, {
-            "date_start": new Date(2016, 1, 29, 18, 30),
-            "date_end": new Date(2016, 1, 29, 19, 00),
+            "date_start": new Date(2016, 0, 29, 18, 30),
+            "date_end": new Date(2016, 0, 29, 19, 0),
             "description": "Workshop #1"
         }]
     }, {
         "name": "Saturday",
-        "event": [{
-            "date_start": new Date(2016, 1, 30, 10, 0),
-            "date_end": new Date(2016, 1, 30, 11, 0),
+        "events": [{
+            "date_start": new Date(2016, 0, 30, 10, 0),
+            "date_end": new Date(2016, 0, 30, 11, 0),
             "description": "Workshop #2"
         }, {
-            "date_start": new Date(2016, 1, 30, 11, 15),
-            "date_end": new Date(2016, 1, 30, 12, 15),
+            "date_start": new Date(2016, 0, 30, 11, 15),
+            "date_end": new Date(2016, 0, 30, 12, 15),
             "description": "Tech Talk #2"
         }, {
-            "date_start": new Date(2016, 1, 30, 12, 15),
-            "date_end": new Date(2016, 1, 30, 1, 15),
+            "date_start": new Date(2016, 0, 30, 12, 15),
+            "date_end": new Date(2016, 0, 30, 1, 15),
             "description": "Lunch"
         }, {
-            "date_start": new Date(2016, 1, 30, 1 + 12, 15),
-            "date_end": new Date(2016, 1, 30, 2 + 12, 15),
+            "date_start": new Date(2016, 0, 30, 1 + 12, 15),
+            "date_end": new Date(2016, 0, 30, 2 + 12, 15),
             "description": "Tech Talk #3"
         }, {
-            "date_start": new Date(2016, 1, 30, 2 + 12, 30),
-            "date_end": new Date(2016, 1, 30, 3 + 12, 30),
+            "date_start": new Date(2016, 0, 30, 2 + 12, 30),
+            "date_end": new Date(2016, 0, 30, 3 + 12, 30),
             "description": "Workshop #3"
         }, {
-            "date_start": new Date(2016, 1, 30, 3 + 12, 45),
-            "date_end": new Date(2016, 1, 30, 4 + 12, 45),
+            "date_start": new Date(2016, 0, 30, 3 + 12, 45),
+            "date_end": new Date(2016, 0, 30, 4 + 12, 45),
             "description": "Tech Talk #4"
         }, {
-            "date_start": new Date(2016, 1, 30, 5 + 12, 0),
-            "date_end": new Date(2016, 1, 30, 6 + 12, 15),
+            "date_start": new Date(2016, 0, 30, 5 + 12, 0),
+            "date_end": new Date(2016, 0, 30, 6 + 12, 15),
             "description": "Startup Panel"
         }, {
-            "date_start": new Date(2016, 1, 30, 6 + 12, 30),
-            "date_end": new Date(2016, 1, 30, 8 + 12, 0),
+            "date_start": new Date(2016, 0, 30, 6 + 12, 30),
+            "date_end": new Date(2016, 0, 30, 8 + 12, 0),
             "description": "Exclusive Dinner"
         }, {
-            "date_start": new Date(2016, 1, 30, 8 + 12, 0),
-            "date_end": new Date(2016, 1, 30, 10 + 12, 0),
+            "date_start": new Date(2016, 0, 30, 8 + 12, 0),
+            "date_end": new Date(2016, 0, 30, 10 + 12, 0),
             "description": "Social Mixer"
         }]
     }];

@@ -17,7 +17,22 @@
     </div>
     <navbar active="navbarActive"></navbar>
     
-    
+    <div ng-repeat="day in schedule" class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+        <div class="header fancyHeader">
+            {{day.name}}
+        </div>
+        <div ng-repeat="event in day.events" class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                 {{event.description}}
+            </div>
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3">
+                {{formatDate(event.date_start)}}
+            </div>
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3">
+                {{formatDate(event.date_start)}}
+            </div>
+        </div>
+    </div>
     
     <script src="scripts/lib/angular.min.js"></script>
     <script src="scripts/lib/jquery-1.11.3.min.js"></script>
