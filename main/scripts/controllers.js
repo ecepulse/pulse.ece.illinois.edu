@@ -72,7 +72,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
             "info": "Compete in various ECE related topics spanning from Signal Processing, Software, and many more.  Show off your knowledge and skills in ECE-related fields while having fun and winning prizes",
     }, {
             "title": "Workshops.",
-            "info": "Learn something new with our workshops.  Some of our sponsors will be holding workshops in various topics."
+            "info": "Learn something new with our workshops.  There will be workshops in software, and others.  Details will be released soon."
     }], [{
         
     }]];
@@ -205,6 +205,100 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         "verticalPercentage": "85%"
     };
     
+    $scope.schedule = [{
+        "name": "Saturday",
+        "events": [{
+            "date_start": new Date(2016, 1, 23, 10, 0),
+            "date_end": new Date(2016, 1, 23, 22, 0),
+            "description": "Competitions kickoff!"
+        }, {
+            "date_start": new Date(2016, 1, 23, 9, 30),
+            "date_end": new Date(2016, 1, 23, 10, 30),
+            "description": "Breakfast"
+        }, {
+            "date_start": new Date(2016, 1, 23, 12, 00),
+            "date_end": new Date(2016, 1, 23, 13, 00),
+            "description": "Lunch"
+        }, {
+            "date_start": new Date(2016, 1, 23, 17, 30),
+            "date_end": new Date(2016, 1, 23, 18, 30),
+            "description": "Dinner"
+        }]
+    }, {
+        "name": "Thursday",
+        "event": [{
+            "date_start": new Date(2016, 1, 28, 16, 30),
+            "date_end": new Date(2016, 1, 28, 17, 00),
+            "description": "Registration"
+        }, {
+            "date_start": new Date(2016, 1, 28, 17, 0),
+            "date_end": new Date(2016, 1, 28, 17, 30),
+            "description": "Introductions"
+        }, {
+            "date_start": new Date(2016, 1, 28, 17, 30),
+            "date_end": new Date(2016, 1, 28, 18, 45),
+            "description": "Keynote Speaker and Q/A",
+        }, {
+            "date_start": new Date(2016, 1, 28, 18, 45),
+            "date_end": new Date(2016, 1, 28, 20, 0),
+            "description": "Dinner"
+        }]
+    }, {
+        "name": "Friday",
+        "event": [{
+            "date_start": new Date(2016, 1, 29, 17, 0),
+            "date_end": new Date(2016, 1, 29, 18, 0),
+            "description": "Tech Talk #1"
+        }, {
+            "date_start": new Date(2016, 1, 29, 18, 0),
+            "date_end": new Date(2016, 1, 29, 18, 30),
+            "description": "Dinner"
+        }, {
+            "date_start": new Date(2016, 1, 29, 18, 30),
+            "date_end": new Date(2016, 1, 29, 19, 00),
+            "description": "Workshop #1"
+        }]
+    }, {
+        "name": "Saturday",
+        "event": [{
+            "date_start": new Date(2016, 1, 30, 10, 0),
+            "date_end": new Date(2016, 1, 30, 11, 0),
+            "description": "Workshop #2"
+        }, {
+            "date_start": new Date(2016, 1, 30, 11, 15),
+            "date_end": new Date(2016, 1, 30, 12, 15),
+            "description": "Tech Talk #2"
+        }, {
+            "date_start": new Date(2016, 1, 30, 12, 15),
+            "date_end": new Date(2016, 1, 30, 1, 15),
+            "description": "Lunch"
+        }, {
+            "date_start": new Date(2016, 1, 30, 1 + 12, 15),
+            "date_end": new Date(2016, 1, 30, 2 + 12, 15),
+            "description": "Tech Talk #3"
+        }, {
+            "date_start": new Date(2016, 1, 30, 2 + 12, 30),
+            "date_end": new Date(2016, 1, 30, 3 + 12, 30),
+            "description": "Workshop #3"
+        }, {
+            "date_start": new Date(2016, 1, 30, 3 + 12, 45),
+            "date_end": new Date(2016, 1, 30, 4 + 12, 45),
+            "description": "Tech Talk #4"
+        }, {
+            "date_start": new Date(2016, 1, 30, 5 + 12, 0),
+            "date_end": new Date(2016, 1, 30, 6 + 12, 15),
+            "description": "Startup Panel"
+        }, {
+            "date_start": new Date(2016, 1, 30, 6 + 12, 30),
+            "date_end": new Date(2016, 1, 30, 8 + 12, 0),
+            "description": "Exclusive Dinner"
+        }, {
+            "date_start": new Date(2016, 1, 30, 8 + 12, 0),
+            "date_end": new Date(2016, 1, 30, 10 + 12, 0),
+            "description": "Social Mixer"
+        }]
+    }];
+    
     angular.element(document).ready(function() {
         fixLandingVerticalPercentage();
         center_navbar();
@@ -231,7 +325,6 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
     angular.element($window).bind('scroll', navbar_scroll);
     angular.element($window).bind('resize', center_navbar);
 }]);
-
 
 ecePulse2016.directive('splashHeader', function () {
     return {
