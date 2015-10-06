@@ -203,7 +203,14 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         var m = date.getMonth() + 1;
         var y = date.getFullYear();
         return '' + y + '-' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
-    }
+    };
+    
+    $scope.formatTime = function(date) {
+        var h = date.getHours();
+        var m = date.getMinutes() >= 10 ? date.getMinutes() : "0" + date.getMinutes();
+        var am_pm = h >= 12 ? "PM" : "AM";
+        return h % 13 + ":" + m + " " + am_pm;
+    };
 
     
     $scope.navbarActive = "Schedule";
