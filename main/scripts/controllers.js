@@ -209,7 +209,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         var h = date.getHours();
         var m = date.getMinutes() >= 10 ? date.getMinutes() : "0" + date.getMinutes();
         var am_pm = h >= 12 ? "PM" : "AM";
-        return h % 13 + ":" + m + " " + am_pm;
+        return (h % 12 == 0 ? 12 : h % 12) + ":" + m + " " + am_pm;
     };
 
     
@@ -222,6 +222,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
     
     $scope.schedule = [{
         "name": "Saturday",
+        "date": new Date(2016, 0, 23),
         "events": [{
             "date_start": new Date(2016, 0, 23, 10, 0),
             "date_end": new Date(2016, 0, 23, 22, 0),
@@ -241,6 +242,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         }]
     }, {
         "name": "Thursday",
+        "date": new Date(2016, 0, 28),
         "events": [{
             "date_start": new Date(2016, 0, 28, 16, 30),
             "date_end": new Date(2016, 0, 28, 17, 0),
@@ -260,6 +262,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         }]
     }, {
         "name": "Friday",
+        "date": new Date(2016, 0, 29),
         "events": [{
             "date_start": new Date(2016, 0, 29, 17, 0),
             "date_end": new Date(2016, 0, 29, 18, 0),
@@ -275,6 +278,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         }]
     }, {
         "name": "Saturday",
+        "date": new Date(2016, 0, 30),
         "events": [{
             "date_start": new Date(2016, 0, 30, 10, 0),
             "date_end": new Date(2016, 0, 30, 11, 0),
@@ -285,7 +289,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
             "description": "Tech Talk #2"
         }, {
             "date_start": new Date(2016, 0, 30, 12, 15),
-            "date_end": new Date(2016, 0, 30, 1, 15),
+            "date_end": new Date(2016, 0, 30, 1 + 12, 15),
             "description": "Lunch"
         }, {
             "date_start": new Date(2016, 0, 30, 1 + 12, 15),
