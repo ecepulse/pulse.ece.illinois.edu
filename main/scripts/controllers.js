@@ -18,14 +18,17 @@ function navbar_scroll(e) {
         $('.navbar').css('position', 'fixed');
         $('.navbar').css('top', '0'); 
         $('.landing').css('margin-bottom', trueHeight + 'px');
-        
+        $('.navbar').css('box-shadow', '0 2px 2px -2px gray');
+        $('.navbar').css('border-radius', '0');
+        $('.navbar').css('opacity', '0.95');
 //            $('.navbar').css('left', screenWidth/2 - width/2 + 14 + 'px');
     } else {
         $('.navbar').css('position', 'initial');
         $('.navbar').css('top', '0');
         $('.navbar').css('transform', '');
         $('.landing').css('margin-bottom', '0' + 'px');
-        
+        $('.navbar').css('box-shadow', 'initial');
+        $('.navbar').css('opacity', '1');
     }
 }
 
@@ -233,10 +236,6 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         "name": "Saturday",
         "date": new Date(2016, 0, 23),
         "events": [{
-            "date_start": new Date(2016, 0, 23, 10, 0),
-            "date_end": new Date(2016, 0, 23, 22, 0),
-            "description": "Competitions kickoff!"
-        }, {
             "date_start": new Date(2016, 0, 23, 9, 30),
             "date_end": new Date(2016, 0, 23, 10, 30),
             "description": "Breakfast"
