@@ -223,11 +223,12 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         "verticalPercentage": "85%"
     };
     
-    $window.counter = 0;
+    $scope.counter = 0;
     
     $scope.colorCounter = function() {
         
-        if ($window.counter++ % 2 == 1) {
+        if ($scope.counter++ % 2 == 1) {
+            console.log($scope.counter);
             return "lightOrange";
         }
     }
@@ -343,6 +344,38 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
         "header": "Contact",
         "verticalPercentage": "85%"
     };
+    
+    $scope.contactCards = [{
+        "name": "Ankit Jain",
+        "position": "Conference Director",
+        "contact": "ecepulse-director",
+        "blurb": ["Ankit Jain is the Conference Director for ECE Pulse. Ankit is in his final year finishing his Master’s Degree in Electrical Engineering. He likes working in analog design and sensor-based systems, and has been really involved with Pulse since the beginning", "As Conference Director, Ankit’s job is to oversee every single aspect of the conference and to also be the “face” of the conference to all those interested. By making sure that every part of the conference is running smoothly and that every attendee, speaker, and company is properly accounted for, his job is successful.", "What makes Pulse exciting for Ankit is the consistent evolution that has happened yearly. This event started as a smaller scale conference in three different buildings with an attendance of ~250 people. Since then, the conference has increased to ~450+ attendees (numbers from 2015). He hopes to keep bringing this conference to the next level and come back in the upcoming years to see continued growth."]
+    }, {
+        "name": "Kevin Perkins",
+        "position": "Secretary and Treasurer",
+        "contact": "ecepulse-treasury",
+        "blurb": ["Kevin Perkins is a junior in Computer Engineering. He enjoys programming, interfacing with hardware through software, and solving puzzles.", "This is Kevin’s second year working as Secretary and Treasurer for Pulse, and third year working with Pulse. He documents Pulse meetings and drafts all of the group’s budgets. Since he in charge of the money, he basically has all of the power.", "What drives Kevin is finally seeing all of the hard work during the year finally paying off; witnessing the great speakers, the problem solving, and celebration of ECE. This is the reason that Kevin continues to work with Pulse every year."]
+    }, {
+        "name": "Anit Gandhi",
+        "position": "Workshops",
+        "contact": "ecepulse-workshops",
+        "blurb": ["Anit is a senior in Computer Engineering with a focus on cyber security and cryptography, along with a business minor, originally from Naperville, IL.. He hopes to one day found and run a security startup.", "This year, he’s running the Workshops committee, which is putting on three workshops for students who come to the conference to learn a new skill in a hands on way. We aim to enrich as many students’ technical knowledge as possible by making approachable.", "Pulse is something Anit looks forward to every year because of the amazing array of industry speakers in a purely technical format. There’s no recruiting or corporate aspect, just a lot of fun."]
+    }, {
+        "name": "Rufei Zhou",
+        "position": "Competitions",
+        "contact": "ecepulse-competitions",
+        "blurb": ["Rufei is a junior in Computer Engineering from Baton Rouge, LA. He likes designing new systems to make life easier, programming, and long walks on the beach.", "He is in charge of the Competitions committee, which aims to allow students to show off their knowledge in ECE-related fields while having fun and winning prizes. Like Workshops, it’s a chance for students to actively participate in hands-on work outside of the classroom.", "What makes Pulse really exciting for Rufei is that it’s completely self-run. It’s not quite a hackathon, and not quite a conference, but something run by students, for students."]
+    }, {
+        "name": "Jeffrey Huang",
+        "position": "Webmaster",
+        "contact": "ecepulse-webmaster",
+        "blurb": []
+    }];
+    
+    $scope.otherContributors = {
+        "main": ["Milan Dasgupta"],
+        "others": []
+    }
     
     angular.element(document).ready(function() {
         fixLandingVerticalPercentage();

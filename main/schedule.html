@@ -21,7 +21,7 @@
         <div class="header fancyHeader">
             {{day.name}} {{formatDate(day.date)}}
         </div>
-        <div ng-repeat="event in day.events" class="scheduleRow row">
+        <div ng-repeat="event in day.events" class="{{colorCounter()}} scheduleRow row">
             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 valign">
                  {{event.description}}
             </div>
