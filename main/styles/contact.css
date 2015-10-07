@@ -5,6 +5,7 @@
 .contactName {
     text-align: center;
     font-size: 2em;
+    font-weight: bold;
 }
 
 .contactPicture {
@@ -28,4 +29,12 @@
 .contactPosition {
     font-size: 1.6em;
     text-align: center;
+}
+
+.contactLink:hover {
+    text-decoration: underline !important;
+}
+
+.contactLink:link { 
+    color: #DE592B;
 }

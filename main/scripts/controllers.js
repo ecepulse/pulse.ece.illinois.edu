@@ -370,6 +370,16 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
         "position": "Webmaster",
         "contact": "ecepulse-webmaster",
         "blurb": []
+    }, {
+        "name": "Bassel Alesh",
+        "position": "Media and Design",
+        "contact": "ecepulse-media",
+        "blurb": ["Bassel Alesh is a sophomore in Electrical Engineering with an interest in circuit design. This is actually Bassel’s first time being involved with Pulse.", "This year, he is in charge of Media & Design. His committee works on creating all the visuals and artwork for Pulse. Some of things he will be working on include this year’s ‘mascot’ and the videos that will be released for the conference.", "Bassel thinks Pulse is awesome because he finds it to be very beneficial to its attendees, mainly because of how it tries to keep its events relevant and unique. This year’s ‘mascot’ is a cool waving robot, which is another reason why he thinks Pulse is awesome."]
+    }, {
+        "name": "Tyler Hansen",
+        "position": "Marketing and Logistics",
+        "contact": "ecepulse-logistics",
+        "blurb": ["Tyler Hansen is the Director of Marketing & Logistics for ECE Pulse 2016. Tyler is a junior in Computer Engineering at ECE Illinois. As vice chair of academic development for the department’s Student Advancement Committee, he leads an effort to design events and programs that will assist students within the department in their academic pursuits.", "As Director of Marketing & Logistics for Pulse, Tyler’s job is twofold: first, he oversees publicity for the event, increasing student and faculty engagement in the department as well as throughout the university and community. Second, he manages the logistics for the conference, making sure that all the details work together smoothly.", "Tyler is excited to see how Pulse can reach even more students this year. Over the past several years, Pulse has become a hallmark event for the department, and Tyler is excited to be able to reach a large number of the freshman class with this year’s conference."]
     }];
     
     $scope.otherContributors = {
@@ -420,5 +430,11 @@ ecePulse2016.directive('navbar', function() {
             active: "=active",
         },
         templateUrl: 'templates/navbar.html'
+    }
+});
+
+ecePulse2016.directive('footer', function() {
+    return {
+        templateUrl: 'templates/footer.html'
     }
 });
