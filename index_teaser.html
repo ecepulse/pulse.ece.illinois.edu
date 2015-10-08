@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<head>
+    <title>ECE Pulse 2016</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+    <style>
+        .polyline {
+            z-index: -9998;
+            position: fixed;
+            background-color: inherit;
+            background: linear-gradient(
+                          rgba(1,53,103,0.95), 
+                          rgba(1,53,103,0.95)
+                        ), 
+            url('pulseFront.JPG');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .pulse {
+
+        }
+
+        .automate {
+            position: fixed;
+            right: 2%;
+            font-size: 2.5vw;
+            font-weight: bold;
+        }
+        .innovation {
+            position: fixed;
+            left: 23%;
+            font-size: 2vw;
+            font-weight: bold;
+        }
+
+        .ECEPulse {
+            position: fixed;
+            left: 23%;
+            font-size: 5vw;
+            font-weight: 300;
+        }
+
+
+        .ECEPulse,
+        .automate, 
+        .innovation {
+            color: white;
+            font-weight: 300;
+            font-family: 'Roboto Slab', serif;
+        }
+        .orange {
+            font-weight: bold;
+        }
+        .orange, .automate, .sponsor {
+            color: #DE592B;
+        }
+
+        .white {
+            color: white !important;
+        }
+
+        .preregister {
+            width: 25%;
+            position: fixed;
+            top: 75%;
+            left: 32.5%;
+        }
+
+        .submit_preregister {
+            width: 10%;
+            position: fixed;
+            top: 75%;
+            left: 57.5%;
+        }
+
+        .sponsor {
+            top: 85%;
+            position: fixed;
+            left: 25%;
+            width: 50%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #placeholder {
+            border-radius: 0 !important;
+            padding: 20px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #placeholder::-webkit-input-placeholder {
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        #placeholder:-moz-placeholder { /* Firefox 18- */
+           color: red;  
+        }
+
+        #placeholder::-moz-placeholder {  /* Firefox 19+ */
+           color: red;  
+        }
+
+        #placeholder:-ms-input-placeholder {  
+           color: red;  
+        }
+
+        .btn-pulse {
+            background-color: #DE592B;
+            font-family: 'Roboto Slab', serif;
+            border-radius: 0 !important;
+            padding: 10px;
+        }
+
+        .sponsor {
+            font-size: 24px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .sponsor:hover {
+            text-decoration: underline;
+        }
+        
+        .second {
+            margin-top: 100%;
+            z-index: -9999;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="ECEPulse">ECE <span class="orange">PULSE</span> 2016</p>
+        <p class="innovation">The heartbeat of innovation. <span class="orange">End of January</span></p>
+        <p class="automate white">Automate your <span class="orange rotation">world</span></p>
+        <svg class="polyline">
+          <polyline class="pulse" points="" style="stroke-width: 2; stroke:#ff6a41" fill="rgba(255, 255, 255, 0)"/>
+        </svg>
+        <div class="col-md-6">
+            <div class="preregister">
+                <input type="email" class="form-control" id="placeholder" spellcheck="false" placeholder="Sign up with your email">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="submit_preregister btn btn-pulse">Pre-Register</button>
+        </div>
+        <p class="sponsor">Interested in sponsoring?</p>
+
+    </div>
+</body>
+
+<script>
+
+    var automateWords = ["life", 
+                         "kitchen", 
+                         "roads", 
+                         "school", 
+                         "business", 
+                         "world", 
+                         "work"];
+
+    var pulsePoints = [[0,250], 
+                       [50,250], 
+                       [50,200], 
+                       [60,190], 
+                       [60,300], 
+                       [70,310], 
+                       [70,160], 
+                       [80,150], 
+                       [80,280], 
+                       [90,270], 
+                       [90,210], 
+                       [100,220], 
+                       [100,250], 
+                       [500,250]];
+
+    function automate() {
+        var newIndex = Math.floor(Math.random() * automateWords.length);
+
+        var rotation = $('.rotation');
+        rotation.html(automateWords[newIndex]);
+    }
+
+    $('.sponsor').on('click', function()
+    {
+        window.location='http://pulse.ece.illinois.edu/sponsor.pdf';
+    })
+
+    $('.submit_preregister').on('click', function() {
+        var email = $('#placeholder').val();
+        $.ajax({
+            url: './preregister/preregister.php',
+            method: "POST",
+            params: {
+                'email': email
+            },
+            success: function(data) {
+                $('.btn-pulse').animate({
+                    opacity: '0'
+                }, 200);
+                $('#placeholder').animate({
+                    opacity: '0'
+                }, 200);
+            },
+            error: function(data) {
+                $('.btn-pulse').animate({
+                    opacity: '0'
+                }, 200);
+                $('#placeholder').animate({
+                    opacity: '0'
+                }, 200);
+            }
+        });
+    });
+
+    function floatAbovePolyline()
+    {
+        var midpoint = 50;
+        var toFloat = [$('.automate'),
+                       $('.ECEPulse')];
+
+        padding = 30;
+
+        for (var i = 0; i < toFloat.length; i++)
+        {
+            var windowHeight = $(window).height();
+            windowHeight /= 2;
+            var boxHeight = toFloat[i].height();
+            windowHeight -= boxHeight/2 + boxHeight/2;
+            toFloat[i].css({ 'top': windowHeight + 'px' });
+        }
+    }
+    function floatBelowPolyline()
+    {
+        var midpoint = 50;
+        var toFloat = [$('.innovation')];
+
+        padding = -30;
+
+        for (var i = 0; i < toFloat.length; i++)
+        {
+            var windowHeight = $(window).height();
+            windowHeight /= 2;
+            var boxHeight = toFloat[i].height();
+            windowHeight -= boxHeight/2 - boxHeight/2;
+            toFloat[i].css({ 'top': windowHeight + 'px' });
+        }
+    }
+
+    function drawPolyline(points)
+    {
+        var polylineHeight = $(window).height();
+        var polylineWidth = $(window).width();
+        var polyline = $('.polyline');
+        var pulse = $('.pulse');
+        var baselineHeight = 500;
+        var baselineWidth = 500;
+
+        polyline.height(polylineHeight);
+        polyline.width(polylineWidth);
+
+        var newPoints = "";
+
+        for (var i = 0; i < points.length; i++)
+        {
+            var newPulseWidth = (points[i][0]/baselineWidth) * polylineWidth;
+            var newPulseHeight = (points[i][1]/baselineHeight) * polylineHeight;
+            newPoints += String(newPulseWidth) + "," + String(newPulseHeight) + " ";
+        }
+
+        pulse.attr('points', newPoints);
+    }
+
+    $(window).on('resize', function() {
+        drawPolyline(pulsePoints);
+        floatAbovePolyline();
+        floatBelowPolyline();
+    });
+
+    drawPolyline(pulsePoints);
+    floatAbovePolyline();
+    floatBelowPolyline();
+    window.setInterval(automate, 5000);
+</script>
