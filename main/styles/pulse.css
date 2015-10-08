@@ -117,3 +117,11 @@ a:active {
 .current > a:active {   
     cursor: default;
 }
+
+.preRegister {
+    margin-top:40px;
+}
+
+.preRegisterForm {
+    margin-top: 40px;
+}

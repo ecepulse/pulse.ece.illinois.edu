@@ -95,6 +95,24 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
         ]
     ];
     
+    $scope.preRegister = function() {
+        var email = $('.preRegisterInput').val();
+        $.ajax({
+            url: './preregister/preregister.php',
+            method: "POST",
+            params: {
+                'email': email
+            },
+            success: function(data) {
+                $('.toDisappear').hide();
+                $('.preRegisterForm').html("Thank you for pre-registering!");
+            },
+            error: function(data) {
+                
+            }
+        });
+    };
+    
     $scope.scrollTo = function(section) {
         var aboutDiv = $('.' + section);
         event.preventDefault();
