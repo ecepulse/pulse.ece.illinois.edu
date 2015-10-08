@@ -11,12 +11,7 @@ if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
 }
 
-for ($_POST as $key => $value) {
-        
-        echo $key;
-        echo "  "
-        echo $value;
-    }
+var_dump($_POST);
 $email = $_POST["email"];
 
 $query = 'INSERT INTO preregister (email) VALUES("'.$email.'")';
