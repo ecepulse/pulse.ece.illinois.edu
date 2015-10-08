@@ -98,7 +98,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     $scope.preRegister = function() {
         var email = $('.preRegisterInput').val();
         $.ajax({
-            url: './preregister/preregister.php',
+            url: './preregister.php',
             method: "POST",
             params: {
                 'email': email
