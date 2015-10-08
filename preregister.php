@@ -8,7 +8,7 @@ $conn = new mysqli($servername, $username, $password, $database);
 
 if ($conn->connect_error)
 {
-    echo "Failure"
+    echo "Failure";
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -16,7 +16,7 @@ function saveEmail($email)
 {
     $query = "INSERT INTO preregister (col1) VALUES(".$email.")";
     $conn->query($query);
-    return "shouldBeSuccessful"
+    return "shouldBeSuccessful";
 }
 
 $email = $_POST["email"];
