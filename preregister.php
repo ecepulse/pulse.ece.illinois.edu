@@ -12,6 +12,7 @@ if ($conn->connect_error)
 }
 
 $email = $_POST["email"];
+echo $email;
 
 $query = 'INSERT INTO preregister (email) VALUES("'.$email.'")';
 $conn->query($query);
