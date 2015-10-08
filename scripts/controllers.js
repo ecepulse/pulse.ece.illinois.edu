@@ -355,6 +355,15 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
 
 }]);
 
+ecePulse2016.controller('competitionsPage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
+    
+    $scope.header = {
+        "header": "Competitions Coming Soon",
+        "verticalPercentage": "85%"
+    };
+    
+}]);
+
 ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
     
     $scope.navbarActive = "Contact"
