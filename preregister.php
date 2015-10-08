@@ -1,5 +1,4 @@
 <?php
-echo "Here";
 $servername = "pulseece.web.engr.illinois.edu";
 $username = "pulseece_admin16";
 $password = "ECEPulse123";
@@ -8,6 +7,7 @@ $conn = new mysqli($servername, $username, $password, $database);
 
 if ($conn->connect_error)
 {
+    echo "connection error";
     die("Connection failed: " . $conn->connect_error);
 }
 
