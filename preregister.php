@@ -1,5 +1,5 @@
 <?php
-echo "Here"
+echo "Here";
 $servername = "pulseece.web.engr.illinois.edu";
 $username = "pulseece_admin16";
 $password = "ECEPulse123";
