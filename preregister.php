@@ -11,7 +11,7 @@ if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
 }
 
-for $_POST as $key => $value) {
+for ($_POST as $key => $value) {
         
         echo $key;
         echo "  "
