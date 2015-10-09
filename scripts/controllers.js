@@ -100,7 +100,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
         $.ajax({
             url: './preregister.php',
             method: "POST",
-            body: {
+            data: {
                 'email': email
             },
             success: function(data) {
