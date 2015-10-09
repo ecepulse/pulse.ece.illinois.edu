@@ -1,7 +1,7 @@
 <?php
 $servername = "pulseece.web.engr.illinois.edu";
 $username = "pulseece_admin16";
-$password = "ECEPulse123";
+$password = "pulseECE123";
 $database = "pulseece_2016";
 $conn = new mysqli($servername, $username, $password, $database);
 
