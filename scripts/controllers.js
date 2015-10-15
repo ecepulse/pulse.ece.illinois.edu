@@ -202,7 +202,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     }
     
     $('.sponsorLink').on('click', function() {
-        $window.location = 'http://pulse.ece.illinois.edu/2016/main/sponsor.pdf';
+        $window.location = 'http://pulse.ece.illinois.edu/sponsor.pdf';
     });
 
     angular.element(document).ready(function () {
