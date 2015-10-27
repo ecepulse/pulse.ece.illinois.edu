@@ -408,6 +408,11 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
         "position": "Marketing and Logistics",
         "contact": "ecepulse-logistics",
         "blurb": ["Tyler Hansen is the Director of Marketing & Logistics for ECE Pulse 2016. Tyler is a junior in Computer Engineering at ECE Illinois. As vice chair of academic development for the department's Student Advancement Committee, he leads an effort to design events and programs that will assist students within the department in their academic pursuits.", "As Director of Marketing & Logistics for Pulse, Tyler's job is twofold: first, he oversees publicity for the event, increasing student and faculty engagement in the department as well as throughout the university and community. Second, he manages the logistics for the conference, making sure that all the details work together smoothly.", "Tyler is excited to see how Pulse can reach even more students this year. Over the past several years, Pulse has become a hallmark event for the department, and Tyler is excited to be able to reach a large number of the freshman class with this year's conference."]
+    }, {
+        "name": "Shraddha Dangi",
+        "position": "External Affairs",
+        "contact": "ecepulse-external",
+        "blurb": ["Shraddha Dangi is a junior in Electrical Engineering and is interested in RF communication and electromagnetics.", "This year she's the head of external affairs for Pulse. Her role is to be the representative for Pulse in the ECE Student Advancement Committee. She's also the lead for the Amazing Race competition. Styled much like the TV show, teams will solve ECE puzzles to win cool prizes!", "For her, Pulse is an exciting time because it brings everything ECE in one place,the workshops, the competitions, and inspiring talks from great thinkers in the field."]
     }];
     
     $scope.otherContributors = {
