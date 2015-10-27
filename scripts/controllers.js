@@ -397,13 +397,18 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
         "name": "Jeffrey Huang",
         "position": "Webmaster",
         "contact": "ecepulse-webmaster",
-        "blurb": []
+        "blurb": ["Jeffrey is a junior in Computer Engineering from Parkland, FL with an interest in artificial intelligence and computer systems.",  "He is the webmaster for ECE Pulse this year and is aimed to creating a nice website to show off all the awesome stuff that we're doing in pulse!", "Pulse to me is an awesome opportunity to learn from our corporate sponsors through tech talks and workshops as well as show off your ECE knowledge through the competitions.  Without the pressure of recruiting it gives the students the oppotunity to relax and have fun!"]
     }, {
         "name": "Bassel Alesh",
         "position": "Media and Design",
         "contact": "ecepulse-media",
         "blurb": ["Bassel Alesh is a sophomore in Electrical Engineering with an interest in circuit design. This is actually Bassel's first time being involved with Pulse.", "This year, he is in charge of Media & Design. His committee works on creating all the visuals and artwork for Pulse. Some of things he will be working on include this year's ‘mascot' and the videos that will be released for the conference.", "Bassel thinks Pulse is awesome because he finds it to be very beneficial to its attendees, mainly because of how it tries to keep its events relevant and unique. This year's ‘mascot' is a cool waving robot, which is another reason why he thinks Pulse is awesome."]
     }, {
+        "name": "Mosab Elagha",
+        "position": "Corporate",
+        "contact": "ecepulse-corporate",
+        "blurb": ["Mosab is a junior in ECE and is corporate chair for ECE Pulse.", "He also plays smash"]
+    },{
         "name": "Tyler Hansen",
         "position": "Marketing and Logistics",
         "contact": "ecepulse-logistics",
