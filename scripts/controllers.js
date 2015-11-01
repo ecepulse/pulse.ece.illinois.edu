@@ -359,9 +359,29 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
 ecePulse2016.controller('competitionsPage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
     
     $scope.header = {
-        "header": "Competitions Coming Soon",
-        "verticalPercentage": "85%"
+        "header": "Competitions",
+        "verticalPercentage": "85%",
+        "caption": "Cash"
     };
+
+    $scope.competitionInfo = [[{
+        name: "Amazing Race",
+        description: "Work as a team to solve a series of fun introductory ECE and logic puzzles, all culminating in building your prize. This competition is designed to have a low technical barrier and is open to first-year students only."
+    }, {
+        name: "Software",
+        description: "Utilize programming expertise to tackle a series of puzzles that will involve data structures, algorithms, programming principles, and computer security. Our challenges will be supported in C, C++, Java, and Python."
+    }], [{
+        name: "Sensors",
+        description: "Work at the intersection of the natural world, signal processing, and the human body to produce an augmented experience with sensors such as touch, EMG, light, and audio."
+    }, {
+        name: "Reverse Engineering",
+        description: "Use your problem solving skills and clever hardware design techniques to push square pegs into circular holes. Requires familiarity with programming at the bare metal level."
+    }]];
+
+    angular.element(document).ready(function() {
+        fixLandingVerticalPercentage();
+        center_navbar();
+    });
     
 }]);
 
