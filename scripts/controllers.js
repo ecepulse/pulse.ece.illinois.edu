@@ -390,6 +390,8 @@ ecePulse2016.controller('competitionsPage', ['$scope', '$location', '$anchorScro
         center_navbar();
     });
     
+    angular.element($window).bind('scroll', navbar_scroll);
+    angular.element($window).bind('resize', center_navbar);
 }]);
 
 ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
