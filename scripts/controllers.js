@@ -42,7 +42,6 @@ function navbar_scroll(e) {
 function center_navbar() {
     var navbar_item = $('.navbar_item');
     var width = 0;
-    var height = $('.navbar').height();
     var screenWidth = $(window).width();
 
     for (var i = 0; i < navbar_item.length; i++) {
@@ -53,10 +52,9 @@ function center_navbar() {
 
     $('.navbar_wrapper').css("margin-left", marginLeft);
 
-    if ($(window).width() < 400) {
-        $('.navbar_wrapper').width(width);
-        $('.navbar_wrapper').height(height);
+    if (screenWidth < 400) {
         $('.navbar').css('overflow-x', 'scroll');
+        $('.navbar_wrapper').width(width);
         $('.navbar_wrapper').css("margin-left", 0);
         $('.navbar_wrapper').css('overflow-x', 'scroll');
     }
