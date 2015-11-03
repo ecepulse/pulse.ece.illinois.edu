@@ -44,6 +44,12 @@ function center_navbar() {
     var marginLeft = screenWidth/2 - width/2;
 
     $('.navbar_wrapper').css("margin-left", marginLeft);
+
+    if ($(window).width() < 700) {
+        $('.navbar').width($(window).width());
+        $('.navbar_wrapper').css("margin-left", 0);
+        $('.navbar').css('overflow', 'scroll');
+    }
 }
 
 function fixLandingVerticalPercentage() {
