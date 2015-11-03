@@ -1,5 +1,11 @@
 var ecePulse2016 = angular.module("ECEPulse2016", []);
 
+function changeOrientation() {
+    alert("Changed");
+}
+
+window.onorientationchange = changeOrientation;
+
 function navbar_scroll(e) {
     var landing = $('.landing');
 
