@@ -304,7 +304,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         }, {
             "date_start": new Date(2016, 0, 28, 17, 30),
             "date_end": new Date(2016, 0, 28, 18, 45),
-            "description": "Keynote Speaker and Q/A",
+            "description": "Keynote Speaker",
         }, {
             "date_start": new Date(2016, 0, 28, 18, 45),
             "date_end": new Date(2016, 0, 28, 20, 0),
