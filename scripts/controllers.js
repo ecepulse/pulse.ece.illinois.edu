@@ -54,6 +54,7 @@ function center_navbar() {
 
     if (screenWidth < 400) {
         $('.navbar').css('overflow-x', 'scroll');
+        $('.navbar').width($(window).width() - 2);
         $('.navbar_wrapper').width(width);
         $('.navbar_wrapper').css("margin-left", 0);
         $('.navbar_wrapper').css('overflow-x', 'scroll');
