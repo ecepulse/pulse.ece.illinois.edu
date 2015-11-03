@@ -45,7 +45,7 @@ function center_navbar() {
 
     $('.navbar_wrapper').css("margin-left", marginLeft);
 
-    if ($(window).width() < 700) {
+    if ($(window).width() < 640) {
         $('.navbar').width($(window).width());
         $('.navbar_wrapper').css("margin-left", 0);
         $('.navbar').css('overflow', 'scroll');
