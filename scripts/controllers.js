@@ -53,10 +53,12 @@ function center_navbar() {
     $('.navbar_wrapper').css("margin-left", marginLeft);
 
     if ($(window).width() < 400) {
-        $('.navbar').width(width);
-        $('.navbar').css('overflow', 'scroll');
+        $('.navbar_wrapper').width(width);
+        $('.navbar').css('overflow-y', 'hidden');
+        $('.navbar').css('overflow-x', 'scroll');
         $('.navbar_wrapper').css("margin-left", 0);
-        $('.navbar_wrapper').css('overflow', 'scroll');
+        $('.navbar_wrapper').css('overflow-x', 'scroll');
+        $('.navbar_wrapper').css('overflow-y', 'hidden');
     }
 }
 
