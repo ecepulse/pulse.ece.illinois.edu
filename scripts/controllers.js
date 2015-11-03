@@ -1,7 +1,8 @@
 var ecePulse2016 = angular.module("ECEPulse2016", []);
 
 function changeOrientation() {
-    alert("Changed");
+    center_navbar();
+
 }
 
 window.onorientationchange = changeOrientation;
