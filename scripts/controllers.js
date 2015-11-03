@@ -57,7 +57,6 @@ function center_navbar() {
         $('.navbar').width($(window).width() - 2);
         $('.navbar_wrapper').width(width);
         $('.navbar_wrapper').css("margin-left", 0);
-        $('.navbar_wrapper').css('overflow-x', 'scroll');
     }
 }
 
