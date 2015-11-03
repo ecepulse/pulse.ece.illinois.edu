@@ -42,7 +42,7 @@ function navbar_scroll(e) {
 function center_navbar() {
     var navbar_item = $('.navbar_item');
     var width = 0;
-    var height = $('.navbar').outerHeight();
+    var height = $('.navbar').height();
     var screenWidth = $(window).width();
 
     for (var i = 0; i < navbar_item.length; i++) {
