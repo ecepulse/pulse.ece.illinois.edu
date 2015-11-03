@@ -53,7 +53,7 @@ function center_navbar() {
     $('.navbar_wrapper').css("margin-left", marginLeft);
 
     if ($(window).width() < 400) {
-        $('.navbar_wrapper').width(width);
+        $('.navbar_wrapper').css('width', '100%');
         $('.navbar').css('overflow-y', 'hidden');
         $('.navbar').css('overflow-x', 'scroll');
         $('.navbar_wrapper').css("margin-left", 0);
