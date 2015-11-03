@@ -3,6 +3,7 @@
     font-size: 17px;
 }
 
+.scheduleRow:focus,
 .scheduleRow:hover {
     background-color: rgba(222,89,43, 0.2);
 }
