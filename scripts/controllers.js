@@ -84,7 +84,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     $scope.infoCards = [
         [{
             "title": "Speakers.",
-            "info": "ECE Pulse will have speakers."
+            "info": "Hear from the experts in the field of ECE. Past speakers include Irwin Jacobs of Qualcomm and Eric Kleinker of BitTorrent. These presentations are more than just technical—they are filled with life advice from these brilliant minds."
     }, {
             "title": "Competitions.",
             "info": "Compete in various ECE related topics spanning from Signal Processing, Software, and many more.  Show off your knowledge and skills in ECE-related fields while having fun and winning prizes",
