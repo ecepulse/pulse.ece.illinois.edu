@@ -22,13 +22,13 @@
 <body ng-controller="splashPage">
 
     <div class="col-md-12 col-lg-12 col-sm-12 landing">
-        <div class="teaser-video">
-            <video autoplay loop muted poster="assets/video/teaser-frame.png" id="video-bg">
-                <source src="assets/video/teaser.webm" type="video/webm">
-                <source src="assets/video/teaser.mp4" type="video/mp4">
-            </video>
-        </div>
-
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 label orange vishalign" data-verticalPercentage="{{header.verticalPercentage}}">{{header.header}}</div>
+<!--
+        <svg class="polyline valign">
+          <polyline class="pulse" points="" style="stroke-width: 2; stroke:#ff6a41" fill="rgba(255, 255, 255, 0)"/>
+        </svg>
+-->
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 caption white vishalign">{{header.caption}}</div>
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 white vishalign automateYour_">Automate your <span class="hackertyper orange">world</span></div>
         <div class="tempt" ng-click="scrollTo('about')"></div>
     </div>
