@@ -238,6 +238,22 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     
 }]);
 
+var formatTime = function(date) {
+    var h = date.getHours();
+    var m = date.getMinutes() >= 10 ? date.getMinutes() : "0" + date.getMinutes();
+    var am_pm = h >= 12 ? "PM" : "AM";
+    return (h % 12 == 0 ? 12 : h % 12) + ":" + m + " " + am_pm;
+};
+
+var formatDate = function(date) {
+    console.log("Bere");
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getYear();
+
+    return (m + 1) + "/" + d + "/" + 16;
+};
+
 ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
     "use strict";
     
@@ -248,12 +264,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         return '' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d) + '-' + y;
     };
     
-    $scope.formatTime = function(date) {
-        var h = date.getHours();
-        var m = date.getMinutes() >= 10 ? date.getMinutes() : "0" + date.getMinutes();
-        var am_pm = h >= 12 ? "PM" : "AM";
-        return (h % 12 == 0 ? 12 : h % 12) + ":" + m + " " + am_pm;
-    };
+    $scope.formatTime = formatTime;
 
     
     $scope.navbarActive = "Schedule";
@@ -385,6 +396,10 @@ ecePulse2016.controller('competitionsPage', ['$scope', '$location', '$anchorScro
         "verticalPercentage": "85%",
         "caption": "Cash"
     };
+
+    $scope.formatDate = formatDate;
+
+    $scope.date = new Date(2016, 0, 23);
 
     $scope.competitionInfo = [[{
         name: "Amazing Race",
