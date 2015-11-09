@@ -27,7 +27,7 @@
         <div class="row contactCard" ng-repeat="contactCard in contactCards">
             <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
                 <div>
-                    <img class="contactPicture" src="http://placehold.it/350x350" />
+                    <img class="contactPicture" ng-src="{{contactCard.image}}" />
                 </div>
                 <div class="contactName">
                     {{contactCard.name}}
