@@ -90,7 +90,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
             "info": "Compete in various ECE related topics spanning from Signal Processing, Software, and many more.  Show off your knowledge and skills in ECE-related fields while having fun and winning prizes",
     }, {
             "title": "Workshops.",
-            "info": "Learn something new with our workshops.  There will be workshops in software, and others.  Details will be released soon."
+            "info": "Learn some new skills with our hands-on workshops! We'll have a web development software workshop, a microcontroller workshop, and two circuit workshops for beginners and others alike."
     }], [{
         
     }]];
