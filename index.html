@@ -61,7 +61,7 @@
         </div>
         <div ng-repeat="row in sponsors" class="sponsorRow row">
             <div ng-repeat="sponsor in row" class="sponsorCard">
-                <div data-title="{{sponsor.title}}" class="sponsorStuff {{sponsor.layout}}">
+                <div data-title="{{sponsor.title}}" class="sponsorStuff {{sponsor.layout}}" data-link="{{sponsor.link}}">
                     <img class="sponsorImg" src="{{sponsor.imgLink}}">
                 </div>
             </div>
@@ -80,7 +80,14 @@
     <script src="scripts/landing.js"></script>
     <script src="scripts/polyline.js"></script>
     <script src="scripts/sponsor.js"></script>
-    <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,    =d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q= .call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=    .call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+    <script>
+    $("body").on('click', '.sponsorStuff', function() {
+        window.location = $(this).attr('data-link');
+    });
+    </script>
+    <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,    =d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q= .call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=    .call(d,'head')[0];s.appendChild(qs,s)}})()
+    
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </body>
     

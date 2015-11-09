@@ -100,19 +100,22 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
             {
                 "imgLink": "./assets/sponsors/viasat.png",
                 "title": "Viasat",
-                "layout": "col-md-12 col-sm-12 col-xs-12 col-lg-12"
+                "layout": "col-md-12 col-sm-12 col-xs-12 col-lg-12",
+                "link": "http://www.viasat.com"
             }
         ],
         [
             {
                 "imgLink": "./assets/sponsors/microsoft.png",
                 "title": "Microsoft",
-                "layout": "col-md-4 col-sm-6 col-xs-10 col-xs-offset-1 col-lg-3"
+                "layout": "col-md-4 col-sm-6 col-xs-10 col-xs-offset-1 col-lg-3",
+                "link": "http://www.microsoft.com"
             },
             {
                 "imgLink": "./assets/sponsors/northfolkSouthern.png",
                 "title": "Northfolk Southern",
-                "layout": "col-md-4 col-sm-6 col-xs-10 col-xs-offset-1 col-lg-3"
+                "layout": "col-md-4 col-sm-6 col-xs-10 col-xs-offset-1 col-lg-3",
+                "link": "http://www.nscorp.com"
             }
         ]
     ];
