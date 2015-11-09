@@ -9,6 +9,11 @@
 	padding: 5px;
 }
 
+.ccDate {
+    text-align: center;
+    font-size: 2em;
+}
+
 .ccCard {
 	margin-top: 10px;
 	margin-bottom: 10px;
