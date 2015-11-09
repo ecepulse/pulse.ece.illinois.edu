@@ -90,7 +90,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
             "info": "Compete in various ECE related topics spanning from Signal Processing, Software, and many more.  Show off your knowledge and skills in ECE-related fields while having fun and winning prizes",
     }, {
             "title": "Workshops.",
-            "info": "Learn something new with our workshops.  There will be workshops in software, and others.  Details will be released soon."
+            "info": "Learn some new skills with our hands-on workshops! We'll have a web development software workshop, a microcontroller workshop, and two circuit workshops for beginners and others alike."
     }], [{
         
     }]];
@@ -435,46 +435,55 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
     $scope.contactCards = [{
         "name": "Ankit Jain",
         "position": "Conference Director",
+        "image":"http://placehold.it/350x350",
         "contact": "ecepulse-director",
         "blurb": ["Ankit Jain is the Conference Director for ECE Pulse. Ankit is in his final year finishing his Master's Degree in Electrical Engineering. He likes working in analog design and sensor-based systems, and has been really involved with Pulse since the beginning", "As Conference Director, Ankit's job is to oversee every single aspect of the conference and to also be the “face” of the conference to all those interested. By making sure that every part of the conference is running smoothly and that every attendee, speaker, and company is properly accounted for, his job is successful.", "What makes Pulse exciting for Ankit is the consistent evolution that has happened yearly. This event started as a smaller scale conference in three different buildings with an attendance of ~250 people. Since then, the conference has increased to ~450+ attendees (numbers from 2015). He hopes to keep bringing this conference to the next level and come back in the upcoming years to see continued growth."]
     }, {
         "name": "Kevin Perkins",
         "position": "Secretary and Treasurer",
+        "image":"http://placehold.it/350x350",
         "contact": "ecepulse-treasury",
         "blurb": ["Kevin Perkins is a junior in Computer Engineering. He enjoys programming, interfacing with hardware through software, and solving puzzles.", "This is Kevin's second year working as Secretary and Treasurer for Pulse, and third year working with Pulse. He documents Pulse meetings and drafts all of the group's budgets. Since he in charge of the money, he basically has all of the power.", "What drives Kevin is finally seeing all of the hard work during the year finally paying off; witnessing the great speakers, the problem solving, and celebration of ECE. This is the reason that Kevin continues to work with Pulse every year."]
     }, {
         "name": "Anit Gandhi",
         "position": "Workshops",
+        "image":"assets/board/anitgandhi.jpg",
         "contact": "ecepulse-workshops",
         "blurb": ["Anit is a senior in Computer Engineering with a focus on cyber security and cryptography, along with a business minor, originally from Naperville, IL.. He hopes to one day found and run a security startup.", "This year, he's running the Workshops committee, which is putting on three workshops for students who come to the conference to learn a new skill in a hands on way. We aim to enrich as many students' technical knowledge as possible by making approachable.", "Pulse is something Anit looks forward to every year because of the amazing array of industry speakers in a purely technical format. There's no recruiting or corporate aspect, just a lot of fun."]
     }, {
         "name": "Rufei Zhou",
         "position": "Competitions",
+        "image":"http://placehold.it/350x350",
         "contact": "ecepulse-competitions",
         "blurb": ["Rufei is a junior in Computer Engineering from Baton Rouge, LA. He likes designing new systems to make life easier, programming, and long walks on the beach.", "He is in charge of the Competitions committee, which aims to allow students to show off their knowledge in ECE-related fields while having fun and winning prizes. Like Workshops, it's a chance for students to actively participate in hands-on work outside of the classroom.", "What makes Pulse really exciting for Rufei is that it's completely self-run. It's not quite a hackathon, and not quite a conference, but something run by students, for students."]
     }, {
         "name": "Jeffrey Huang",
         "position": "Webmaster",
+        "image":"http://placehold.it/350x350",
         "contact": "ecepulse-webmaster",
         "blurb": ["Jeffrey is a junior in Computer Engineering from Parkland, FL with an interest in artificial intelligence and computer systems.",  "He is the webmaster for ECE Pulse this year and is aimed to creating a nice website to show off all the awesome stuff that we're doing in pulse!", "Pulse to me is an awesome opportunity to learn from our corporate sponsors through tech talks and workshops as well as show off your ECE knowledge through the competitions.  Without the pressure of recruiting it gives the students the oppotunity to relax and have fun!"]
     }, {
         "name": "Bassel Alesh",
         "position": "Media and Design",
+        "image":"http://placehold.it/350x350",
         "contact": "ecepulse-media",
         "blurb": ["Bassel Alesh is a sophomore in Electrical Engineering with an interest in circuit design. This is actually Bassel's first time being involved with Pulse.", "This year, he is in charge of Media & Design. His committee works on creating all the visuals and artwork for Pulse. Some of things he will be working on include this year's ‘mascot' and the videos that will be released for the conference.", "Bassel thinks Pulse is awesome because he finds it to be very beneficial to its attendees, mainly because of how it tries to keep its events relevant and unique. This year's ‘mascot' is a cool waving robot, which is another reason why he thinks Pulse is awesome."]
     }, {
         "name": "Mosab Elagha",
         "position": "Corporate",
+        "image":"http://placehold.it/350x350",
         "contact": "ecepulse-corporate",
         "blurb": ["Mosab is a junior in ECE and is corporate chair for ECE Pulse.", "He also plays smash"]
     },{
         "name": "Tyler Hansen",
         "position": "Marketing and Logistics",
+        "image":"http://placehold.it/350x350",
         "contact": "ecepulse-logistics",
         "blurb": ["Tyler Hansen is the Director of Marketing & Logistics for ECE Pulse 2016. Tyler is a junior in Computer Engineering at ECE Illinois. As vice chair of academic development for the department's Student Advancement Committee, he leads an effort to design events and programs that will assist students within the department in their academic pursuits.", "As Director of Marketing & Logistics for Pulse, Tyler's job is twofold: first, he oversees publicity for the event, increasing student and faculty engagement in the department as well as throughout the university and community. Second, he manages the logistics for the conference, making sure that all the details work together smoothly.", "Tyler is excited to see how Pulse can reach even more students this year. Over the past several years, Pulse has become a hallmark event for the department, and Tyler is excited to be able to reach a large number of the freshman class with this year's conference."]
     }, {
         "name": "Shraddha Dangi",
         "position": "External Affairs",
+        "image":"http://placehold.it/350x350",
         "contact": "ecepulse-external",
         "blurb": ["Shraddha Dangi is a junior in Electrical Engineering and is interested in RF communication and electromagnetics.", "This year she's the head of external affairs for Pulse. Her role is to be the representative for Pulse in the ECE Student Advancement Committee. She's also the lead for the Amazing Race competition. Styled much like the TV show, teams will solve ECE puzzles to win cool prizes!", "For her, Pulse is an exciting time because it brings everything ECE in one place,the workshops, the competitions, and inspiring talks from great thinkers in the field."]
     }];
