@@ -344,40 +344,40 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         "name": "Saturday",
         "date": new Date(2016, 0, 30),
         "events": [{
-            "date_start": new Date(2016, 0, 30, 10, 0),
-            "date_end": new Date(2016, 0, 30, 11, 0),
+            "date_start": new Date(2016, 0, 30, 11, 0),
+            "date_end": new Date(2016, 0, 30, 12, 30),
             "description": "Workshop #2"
         }, {
-            "date_start": new Date(2016, 0, 30, 11, 15),
-            "date_end": new Date(2016, 0, 30, 12, 15),
-            "description": "Tech Talk #2"
-        }, {
-            "date_start": new Date(2016, 0, 30, 12, 15),
-            "date_end": new Date(2016, 0, 30, 1 + 12, 15),
+            "date_start": new Date(2016, 0, 30, 12, 30),
+            "date_end": new Date(2016, 0, 30, 13, 0),
             "description": "Lunch"
         }, {
-            "date_start": new Date(2016, 0, 30, 1 + 12, 15),
-            "date_end": new Date(2016, 0, 30, 2 + 12, 15),
+            "date_start": new Date(2016, 0, 30, 13, 0),
+            "date_end": new Date(2016, 0, 30, 14, 0),
+            "description": "Tech Talk #2"
+        }, {
+            "date_start": new Date(2016, 0, 30, 14, 0),
+            "date_end": new Date(2016, 0, 30, 15, 0),
             "description": "Tech Talk #3"
         }, {
-            "date_start": new Date(2016, 0, 30, 2 + 12, 30),
-            "date_end": new Date(2016, 0, 30, 3 + 12, 30),
+            "date_start": new Date(2016, 0, 30, 15, 0),
+            "date_end": new Date(2016, 0, 30, 16, 30),
             "description": "Workshop #3"
         }, {
-            "date_start": new Date(2016, 0, 30, 3 + 12, 45),
-            "date_end": new Date(2016, 0, 30, 4 + 12, 45),
+            "date_start": new Date(2016, 0, 30, 16, 30),
+            "date_end": new Date(2016, 0, 30, 17, 30),
             "description": "Tech Talk #4"
         }, {
-            "date_start": new Date(2016, 0, 30, 5 + 12, 0),
-            "date_end": new Date(2016, 0, 30, 6 + 12, 15),
+            "date_start": new Date(2016, 0, 30, 17, 45),
+            "date_end": new Date(2016, 0, 30, 19, 0),
             "description": "Startup Panel"
         }, {
-            "date_start": new Date(2016, 0, 30, 6 + 12, 30),
-            "date_end": new Date(2016, 0, 30, 8 + 12, 0),
+            "date_start": new Date(2016, 0, 30, 19, 15),
+            "date_end": new Date(2016, 0, 30, 20, 30),
             "description": "Exclusive Dinner"
         }, {
-            "date_start": new Date(2016, 0, 30, 8 + 12, 0),
-            "date_end": new Date(2016, 0, 30, 10 + 12, 0),
+            "date_start": new Date(2016, 0, 30, 20, 30),
+            "date_end": new Date(2016, 0, 30, 23, 0),
             "description": "Social Mixer"
         }]
     }];
