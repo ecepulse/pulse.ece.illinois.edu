@@ -1,6 +1,10 @@
 .landing {
     width: 100%;
     height: 100%;
+    background: rgba(1,53,103,0.95);
+}
+
+.landingFront {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -8,7 +12,7 @@
 }
 
 @media (max-width: 768px) {
-    .landing {
+    .landingFront {
         background-size: contain;
         background-color: rgb(34,58,122);
     }
