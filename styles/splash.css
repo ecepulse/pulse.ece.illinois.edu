@@ -23,6 +23,18 @@
     background-image: url('../assets/splash/contact.jpg');
 }
 
+.landingSchedule::before, .landingCompetitions::before, .landingContact::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+
+    /* Blue filter over image */
+    background-color: rgba(33,56,123,0.5)
+}
+
 @media (max-width: 768px) {
     .landingFront {
         background-size: contain;
@@ -36,6 +48,9 @@
     width: 100%;
     position: relative;
     text-align: center;
+}
+
+.landing > .automateYour_ {
     top: 3em;
 }
 
