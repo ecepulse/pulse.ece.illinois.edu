@@ -1,14 +1,26 @@
 .landing {
     width: 100%;
     height: 100%;
-    background: rgba(1,53,103,0.95);
-}
-
-.landingFront {
+    background: rgba(33,56,123,1);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-image: url('../assets/front-splash.jpg');
+}
+
+.landingFront {
+    background-image: url('../assets/splash/front.jpg');
+}
+
+.landingSchedule {
+    background-image: url('../assets/splash/schedule.jpg');
+}
+
+.landingCompetitions {
+    background-image: url('../assets/splash/competitions.jpg');
+}
+
+.landingContact {
+    background-image: url('../assets/splash/contact.jpg');
 }
 
 @media (max-width: 768px) {
