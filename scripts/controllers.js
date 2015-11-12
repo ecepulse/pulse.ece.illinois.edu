@@ -70,7 +70,6 @@ function fixLandingVerticalPercentage() {
 }
 
 ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '$window', function ($scope, $location, $anchorScroll, $window) {
-    "use strict"; // To detect any coding errors
     
     $scope.navbarActive = "Schedule";
     
@@ -242,6 +241,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
 }]);
 
 var formatTime = function(date) {
+    if (date === undefined) return ""
     var h = date.getHours();
     var m = date.getMinutes() >= 10 ? date.getMinutes() : "0" + date.getMinutes();
     var am_pm = h >= 12 ? "PM" : "AM";
@@ -258,7 +258,6 @@ var formatDate = function(date) {
 };
 
 ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll', '$window', function($scope, $location, $anchorScroll, $window) {
-    "use strict";
     
     $scope.formatDate = function(date) {
         var d = date.getDate();
@@ -289,9 +288,12 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
     }
     
     $scope.schedule = [{
-        "name": "Saturday",
+        "name": "Saturday, Competitions,",
         "date": new Date(2016, 0, 23),
         "events": [{
+            "date_start": new Date(2016, 0, 23, 10, 0),
+            "description": "Competitions Start"
+        }, {
             "date_start": new Date(2016, 0, 23, 9, 30),
             "date_end": new Date(2016, 0, 23, 10, 30),
             "description": "Breakfast"
@@ -303,9 +305,12 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
             "date_start": new Date(2016, 0, 23, 17, 30),
             "date_end": new Date(2016, 0, 23, 18, 30),
             "description": "Dinner"
+        }, {
+            "date_start": new Date(2016, 0, 23, 22, 00),
+            "description": "Competitions End"
         }]
     }, {
-        "name": "Thursday",
+        "name": "Thursday, Keynote,",
         "date": new Date(2016, 0, 28),
         "events": [{
             "date_start": new Date(2016, 0, 28, 16, 30),
@@ -318,14 +323,14 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         }, {
             "date_start": new Date(2016, 0, 28, 17, 30),
             "date_end": new Date(2016, 0, 28, 18, 45),
-            "description": "Keynote Speaker",
+            "description": "Keynote Speech",
         }, {
             "date_start": new Date(2016, 0, 28, 18, 45),
             "date_end": new Date(2016, 0, 28, 20, 0),
             "description": "Dinner",
         }]
     }, {
-        "name": "Friday",
+        "name": "Friday, Main Conference Day 1,",
         "date": new Date(2016, 0, 29),
         "events": [{
             "date_start": new Date(2016, 0, 29, 17, 0),
@@ -341,7 +346,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
             "description": "Workshop #1"
         }]
     }, {
-        "name": "Saturday",
+        "name": "Saturday, Main Conference Day 2,",
         "date": new Date(2016, 0, 30),
         "events": [{
             "date_start": new Date(2016, 0, 30, 11, 0),
