@@ -273,7 +273,7 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
     
     $scope.header = {
         "header": "Schedule",
-        "verticalPercentage": "85%"
+        "verticalPercentage": "65%"
     };
     
     $scope.counter = 0;
@@ -409,7 +409,7 @@ ecePulse2016.controller('competitionsPage', ['$scope', '$location', '$anchorScro
     
     $scope.header = {
         "header": "Competitions",
-        "verticalPercentage": "85%",
+        "verticalPercentage": "65%",
         "caption": "Cash"
     };
 
@@ -464,7 +464,7 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
     $scope.navbarActive = "Contact"
     $scope.header = {
         "header": "Contact",
-        "verticalPercentage": "85%"
+        "verticalPercentage": "65%"
     };
     
     $scope.contactCards = [{
