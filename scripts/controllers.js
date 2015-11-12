@@ -288,8 +288,9 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
     }
     
     $scope.schedule = [{
-        "name": "Saturday, Competitions,",
+        "name": "Saturday",
         "date": new Date(2016, 0, 23),
+        "description": "Competitions",
         "events": [{
             "date_start": new Date(2016, 0, 23, 10, 0),
             "description": "Competitions Start"
@@ -310,8 +311,9 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
             "description": "Competitions End"
         }]
     }, {
-        "name": "Thursday, Keynote,",
+        "name": "Thursday",
         "date": new Date(2016, 0, 28),
+        "description": "Keynote",
         "events": [{
             "date_start": new Date(2016, 0, 28, 16, 30),
             "date_end": new Date(2016, 0, 28, 17, 0),
@@ -330,8 +332,9 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
             "description": "Dinner",
         }]
     }, {
-        "name": "Friday, Main Conference Day 1,",
+        "name": "Friday",
         "date": new Date(2016, 0, 29),
+        "description": "Main Conference Day 1",
         "events": [{
             "date_start": new Date(2016, 0, 29, 17, 0),
             "date_end": new Date(2016, 0, 29, 18, 0),
@@ -346,8 +349,9 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
             "description": "Workshop #1"
         }]
     }, {
-        "name": "Saturday, Main Conference Day 2,",
+        "name": "Saturday",
         "date": new Date(2016, 0, 30),
+        "description": "Main Conference Day 2",
         "events": [{
             "date_start": new Date(2016, 0, 30, 11, 0),
             "date_end": new Date(2016, 0, 30, 12, 30),
