@@ -419,21 +419,40 @@ ecePulse2016.controller('competitionsPage', ['$scope', '$location', '$anchorScro
 
     $scope.competitionInfo = [[{
         name: "Amazing Race",
-        description: "Work as a team to solve a series of fun introductory ECE and logic puzzles, all culminating in building your prize. This competition is designed to have a low technical barrier and is open to first-year students only."
+        image: "assets/competitionImages/amazingRace.JPG",
+        description: "Work as a team to solve a series of fun introductory ECE and logic puzzles, all culminating in building your prize. This competition is designed to have a low technical barrier and is open to first-year students only.",
+        challengeLink: "http://pulse.ece.illinois.edu/challenge/amazing_race",
     }, {
         name: "Software",
-        description: "Utilize programming expertise to tackle a series of puzzles that will involve data structures, algorithms, programming principles, and computer security. Our challenges will be supported in C, C++, Java, and Python."
+        image: "assets/competitionImages/software.JPG",
+        description: "Utilize programming expertise to tackle a series of puzzles that will involve data structures, algorithms, programming principles, and computer security. Our challenges will be supported in C, C++, Java, and Python.",
+        challengeLink: "http://pulse.ece.illinois.edu/challenge/software",
     }], [{
         name: "Sensors",
-        description: "Work at the intersection of the natural world, signal processing, and the human body to produce an augmented experience with sensors such as touch, EMG, light, and audio."
+        image: "assets/competitionImages/sensors.JPG",
+        description: "Work at the intersection of the natural world, signal processing, and the human body to produce an augmented experience with sensors such as touch, EMG, light, and audio.",
+        challengeLink: "http://pulse.ece.illinois.edu/challenge/sensors",
     }, {
         name: "Reverse Engineering",
-        description: "Use your problem solving skills and clever hardware design techniques to push square pegs into circular holes. Requires familiarity with programming at the bare metal level."
+        image: "assets/competitionImages/reverseEngineering.JPG",
+        description: "Use your problem solving skills and clever hardware design techniques to push square pegs into circular holes. Requires familiarity with programming at the bare metal level.",
+        challengeLink: "http://pulse.ece.illinois.edu/challenge/reverse_engineering",
     }]];
 
     angular.element(document).ready(function() {
         fixLandingVerticalPercentage();
         center_navbar();
+        
+        cards = $('.ccName');
+        for (var i = 0; i < cards.length; i++) {
+            console.log("Break here");
+            $(cards[i]).css({
+                "background": "linear-gradient(rgba(1, 53, 123, .5), rgba(1,53,123,.5)), url('" + $(cards[i]).attr("data-background") + "')",
+                "background-size": "100%",
+                "background-repeat": "no-repeat",
+                "height": "200px",
+            });
+        }
     });
     
     angular.element($window).bind('scroll', navbar_scroll);

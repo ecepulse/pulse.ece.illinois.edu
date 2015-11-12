@@ -1,12 +1,14 @@
 .ccName {
 	padding-left: 5px;
 	font-size: 2em;
-	background: rgb(1,53,103);
 	color: white;
+    background-color: rgba(33,56,123,0.5)
 }
 
 .ccDescription {
 	padding: 5px;
+    padding-top:15px;
+    padding-bottom: 15px;
 }
 
 .ccDate {
@@ -18,4 +20,9 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	box-shadow: 0px 2px 2px grey;
+    padding-bottom: 10px;
+}
+
+.viewCompetition {
+    margin: auto;
 }
