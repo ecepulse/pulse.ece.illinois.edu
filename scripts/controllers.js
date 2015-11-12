@@ -353,31 +353,35 @@ ecePulse2016.controller('schedulePage', ['$scope', '$location', '$anchorScroll',
         "date": new Date(2016, 0, 30),
         "description": "Main Conference Day 2",
         "events": [{
-            "date_start": new Date(2016, 0, 30, 11, 0),
-            "date_end": new Date(2016, 0, 30, 12, 30),
-            "description": "Workshop #2"
-        }, {
-            "date_start": new Date(2016, 0, 30, 12, 30),
+            "date_start": new Date(2016, 0, 30, 10, 30),
             "date_end": new Date(2016, 0, 30, 13, 0),
+            "description": "Workshop #2 - Advanced"
+        }, {
+            "date_start": new Date(2016, 0, 30, 11, 30),
+            "date_end": new Date(2016, 0, 30, 13, 0),
+            "description": "Workshop #2 - Beginner"
+        }, {
+            "date_start": new Date(2016, 0, 30, 13, 00),
+            "date_end": new Date(2016, 0, 30, 13, 30),
             "description": "Lunch"
         }, {
-            "date_start": new Date(2016, 0, 30, 13, 0),
-            "date_end": new Date(2016, 0, 30, 14, 0),
+            "date_start": new Date(2016, 0, 30, 13, 30),
+            "date_end": new Date(2016, 0, 30, 14, 30),
             "description": "Tech Talk #2"
         }, {
-            "date_start": new Date(2016, 0, 30, 14, 0),
-            "date_end": new Date(2016, 0, 30, 15, 0),
+            "date_start": new Date(2016, 0, 30, 14, 30),
+            "date_end": new Date(2016, 0, 30, 15, 30),
             "description": "Tech Talk #3"
         }, {
-            "date_start": new Date(2016, 0, 30, 15, 0),
-            "date_end": new Date(2016, 0, 30, 16, 30),
+            "date_start": new Date(2016, 0, 30, 15, 30),
+            "date_end": new Date(2016, 0, 30, 18, 0),
             "description": "Workshop #3"
         }, {
-            "date_start": new Date(2016, 0, 30, 16, 30),
-            "date_end": new Date(2016, 0, 30, 17, 30),
+            "date_start": new Date(2016, 0, 30, 17, 0),
+            "date_end": new Date(2016, 0, 30, 18, 0),
             "description": "Tech Talk #4"
         }, {
-            "date_start": new Date(2016, 0, 30, 17, 45),
+            "date_start": new Date(2016, 0, 30, 18, 0),
             "date_end": new Date(2016, 0, 30, 19, 0),
             "description": "Startup Panel"
         }, {
