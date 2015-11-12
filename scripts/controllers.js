@@ -483,7 +483,7 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
         "position": "Media and Design",
         "image":"http://placehold.it/350x350",
         "contact": "ecepulse-media",
-        "blurb": ["Bassel Alesh is a sophomore in Electrical Engineering with an interest in circuit design. This is actually Bassel's first time being involved with Pulse.", "This year, he is in charge of Media & Design. His committee works on creating all the visuals and artwork for Pulse. Some of things he will be working on include this year's ‘mascot' and the videos that will be released for the conference.", "Bassel thinks Pulse is awesome because he finds it to be very beneficial to its attendees, mainly because of how it tries to keep its events relevant and unique. This year's ‘mascot' is a cool waving robot, which is another reason why he thinks Pulse is awesome."]
+        "blurb": ["Bassel Alesh is a sophomore in Electrical Engineering with an interest in circuit design. This is actually Bassel's first time being involved with Pulse.", "This year, he is in charge of Media & Design. His committee works on creating all the visuals and artwork for Pulse. Some of things he will be working on include this year's 'mascot' and the videos that will be released for the conference.", "Bassel thinks Pulse is awesome because he finds it to be very beneficial to its attendees, mainly because of how it tries to keep its events relevant and unique. This year's 'mascot' is a cool waving robot, which is another reason why he thinks Pulse is awesome."]
     }, {
         "name": "Mosab Elagha",
         "position": "Networking",
