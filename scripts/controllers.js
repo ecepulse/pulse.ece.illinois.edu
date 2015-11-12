@@ -489,7 +489,7 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
         "position": "Networking",
         "image":"assets/board/mosabelagha.jpg",
         "contact": "ecepulse-corporate",
-        "blurb": ["Mosab is a junior in Computer Engineering and is the Networking Director for ECE Pulse.", "He enjoys programming, robotics, and attending hackathons to making fun projects. He has been growing a strong interest in mobile development - primarily fueled by iOS and Swift.", "Mosab finds Pulse to be one of the best ways to learn from some of the best people in the industry. He also enjoys the local crowd that comes out to the events, citing them as some of the most talented people he has ever met", "Outside of school he enjoys playing soccer, Super Smash Bros., Netflix, chill, and exploring new things."]
+        "blurb": ["Mosab is a junior in Computer Engineering and is the Networking Director for ECE Pulse. He enjoys programming, robotics, and attending hackathons to making fun projects. He has been growing a strong interest in mobile development - primarily fueled by iOS and Swift.", "Mosab finds Pulse to be one of the best ways to learn from some of the best people in the industry. He also enjoys the local crowd that comes out to the events, citing them as some of the most talented people he has ever met", "Outside of school he enjoys playing soccer, Super Smash Bros., Netflix, chill, and exploring new things."]
     }, {
         "name": "Rahul Shah",
         "position": "Corporate",
