@@ -450,7 +450,7 @@ ecePulse2016.controller('competitionsPage', ['$scope', '$location', '$anchorScro
                 "background": "linear-gradient(rgba(1, 53, 123, .5), rgba(1,53,123,.5)), url('" + $(cards[i]).attr("data-background") + "')",
                 "background-size": "100%",
                 "background-repeat": "no-repeat",
-                "height": "200px",
+                "height": "300px",
             });
         }
     });
