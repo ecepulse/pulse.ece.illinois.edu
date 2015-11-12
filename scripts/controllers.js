@@ -451,13 +451,13 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
     $scope.contactCards = [{
         "name": "Ankit Jain",
         "position": "Conference Director",
-        "image":"http://placehold.it/350x350",
+        "image":"assets/board/ankitjain.jpg",
         "contact": "ecepulse-director",
         "blurb": ["Ankit Jain is the Conference Director for ECE Pulse. Ankit is in his final year finishing his Master's Degree in Electrical Engineering. He likes working in analog design and sensor-based systems, and has been really involved with Pulse since the beginning", "As Conference Director, Ankit's job is to oversee every single aspect of the conference and to also be the “face” of the conference to all those interested. By making sure that every part of the conference is running smoothly and that every attendee, speaker, and company is properly accounted for, his job is successful.", "What makes Pulse exciting for Ankit is the consistent evolution that has happened yearly. This event started as a smaller scale conference in three different buildings with an attendance of ~250 people. Since then, the conference has increased to ~450+ attendees (numbers from 2015). He hopes to keep bringing this conference to the next level and come back in the upcoming years to see continued growth."]
     }, {
         "name": "Kevin Perkins",
         "position": "Secretary and Treasurer",
-        "image":"http://placehold.it/350x350",
+        "image":"assets/board/kevinperkins.jpg",
         "contact": "ecepulse-treasury",
         "blurb": ["Kevin Perkins is a junior in Computer Engineering. He enjoys programming, interfacing with hardware through software, and solving puzzles.", "This is Kevin's second year working as Secretary and Treasurer for Pulse, and third year working with Pulse. He documents Pulse meetings and drafts all of the group's budgets. Since he in charge of the money, he basically has all of the power.", "What drives Kevin is finally seeing all of the hard work during the year finally paying off; witnessing the great speakers, the problem solving, and celebration of ECE. This is the reason that Kevin continues to work with Pulse every year."]
     }, {
@@ -475,7 +475,7 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
     }, {
         "name": "Jeffrey Huang",
         "position": "Webmaster",
-        "image":"http://placehold.it/350x350",
+        "image":"assets/board/jefferyhuang.png",
         "contact": "ecepulse-webmaster",
         "blurb": ["Jeffrey is a junior in Computer Engineering from Parkland, FL with an interest in artificial intelligence and computer systems.",  "He is the webmaster for ECE Pulse this year and is aimed to creating a nice website to show off all the awesome stuff that we're doing in pulse!", "Pulse to me is an awesome opportunity to learn from our corporate sponsors through tech talks and workshops as well as show off your ECE knowledge through the competitions.  Without the pressure of recruiting it gives the students the oppotunity to relax and have fun!"]
     }, {
@@ -486,20 +486,26 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
         "blurb": ["Bassel Alesh is a sophomore in Electrical Engineering with an interest in circuit design. This is actually Bassel's first time being involved with Pulse.", "This year, he is in charge of Media & Design. His committee works on creating all the visuals and artwork for Pulse. Some of things he will be working on include this year's ‘mascot' and the videos that will be released for the conference.", "Bassel thinks Pulse is awesome because he finds it to be very beneficial to its attendees, mainly because of how it tries to keep its events relevant and unique. This year's ‘mascot' is a cool waving robot, which is another reason why he thinks Pulse is awesome."]
     }, {
         "name": "Mosab Elagha",
-        "position": "Corporate",
-        "image":"http://placehold.it/350x350",
+        "position": "Networking",
+        "image":"assets/board/mosabelagha.jpg",
         "contact": "ecepulse-corporate",
-        "blurb": ["Mosab is a junior in ECE and is corporate chair for ECE Pulse.", "He also plays smash"]
-    },{
+        "blurb": ["Mosab is a junior in Computer Engineering and is the Networking Director for ECE Pulse.", "He enjoys programming, robotics, and attending hackathons to making fun projects. He has been growing a strong interest in mobile development - primarily fueled by iOS and Swift.", "Mosab finds Pulse to be one of the best ways to learn from some of the best people in the industry. He also enjoys the local crowd that comes out to the events, citing them as some of the most talented people he has ever met", "Outside of school he enjoys playing soccer, Super Smash Bros., Netflix, chill, and exploring new things."]
+    }, {
+        "name": "Rahul Shah",
+        "position": "Corporate",
+        "image":"assets/board/rahulshah.jpg",
+        "contact": "ecepulse-corporate",
+        "blurb": ["Rahul is a senior in Electrical Engineering with an interest in Circuit Design. He is originally from Des Plaines, IL. He can usually be seen at ECEB doing homework late at night and lounging around with his peers.", "During his spare time he enjoys playing super smash bros. (melee), reading articles about the latest tech, and watching Youtube videos.", "His goal for the future is to work for a startup which will have a notable impact on the industry."]
+    }, {
         "name": "Tyler Hansen",
         "position": "Marketing and Logistics",
-        "image":"http://placehold.it/350x350",
+        "image":"assets/board/tylerhansen.jpg",
         "contact": "ecepulse-logistics",
         "blurb": ["Tyler Hansen is the Director of Marketing & Logistics for ECE Pulse 2016. Tyler is a junior in Computer Engineering at ECE Illinois. As vice chair of academic development for the department's Student Advancement Committee, he leads an effort to design events and programs that will assist students within the department in their academic pursuits.", "As Director of Marketing & Logistics for Pulse, Tyler's job is twofold: first, he oversees publicity for the event, increasing student and faculty engagement in the department as well as throughout the university and community. Second, he manages the logistics for the conference, making sure that all the details work together smoothly.", "Tyler is excited to see how Pulse can reach even more students this year. Over the past several years, Pulse has become a hallmark event for the department, and Tyler is excited to be able to reach a large number of the freshman class with this year's conference."]
     }, {
         "name": "Shraddha Dangi",
         "position": "External Affairs",
-        "image":"http://placehold.it/350x350",
+        "image":"assets/board/shraddha.jpg",
         "contact": "ecepulse-external",
         "blurb": ["Shraddha Dangi is a junior in Electrical Engineering and is interested in RF communication and electromagnetics.", "This year she's the head of external affairs for Pulse. Her role is to be the representative for Pulse in the ECE Student Advancement Committee. She's also the lead for the Amazing Race competition. Styled much like the TV show, teams will solve ECE puzzles to win cool prizes!", "For her, Pulse is an exciting time because it brings everything ECE in one place,the workshops, the competitions, and inspiring talks from great thinkers in the field."]
     }];
