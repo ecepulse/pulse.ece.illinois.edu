@@ -488,7 +488,7 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
     }, {
         "name": "Rufei Zhou",
         "position": "Competitions",
-        "image":"http://placehold.it/350x350",
+        "image":"assets/board/rufei.jpg",
         "contact": "ecepulse-competitions",
         "blurb": ["Rufei is a junior in Computer Engineering from Baton Rouge, LA. He likes designing new systems to make life easier, programming, and long walks on the beach.", "He is in charge of the Competitions committee, which aims to allow students to show off their knowledge in ECE-related fields while having fun and winning prizes. Like Workshops, it's a chance for students to actively participate in hands-on work outside of the classroom.", "What makes Pulse really exciting for Rufei is that it's completely self-run. It's not quite a hackathon, and not quite a conference, but something run by students, for students."]
     }, {
@@ -500,7 +500,7 @@ ecePulse2016.controller('contactPage', ['$scope', '$location', '$anchorScroll', 
     }, {
         "name": "Bassel Alesh",
         "position": "Media and Design",
-        "image":"http://placehold.it/350x350",
+        "image":"assets/board/bassel.jpg",
         "contact": "ecepulse-media",
         "blurb": ["Bassel Alesh is a sophomore in Electrical Engineering with an interest in circuit design. This is actually Bassel's first time being involved with Pulse.", "This year, he is in charge of Media & Design. His committee works on creating all the visuals and artwork for Pulse. Some of things he will be working on include this year's 'mascot' and the videos that will be released for the conference.", "Bassel thinks Pulse is awesome because he finds it to be very beneficial to its attendees, mainly because of how it tries to keep its events relevant and unique. This year's 'mascot' is a cool waving robot, which is another reason why he thinks Pulse is awesome."]
     }, {
