@@ -538,9 +538,3 @@ ecePulse2016.directive('navbar', function() {
         templateUrl: 'templates/navbar.html'
     }
 });
-
-ecePulse2016.directive('footer', function() {
-    return {
-        templateUrl: 'templates/footer.html'
-    }
-});
