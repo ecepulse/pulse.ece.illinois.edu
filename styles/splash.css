@@ -40,6 +40,12 @@
     .landingFront {
         background-size: contain;
         background-color: rgb(34,58,122);
+        background-image: url('../assets/splash/front-mobile.jpg');
+    }
+
+
+    .automateYour_ {
+        display: none;
     }
 }
 
