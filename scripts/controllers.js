@@ -459,7 +459,7 @@ ecePulse2016.controller('competitionsPage', ['$scope', '$location', '$anchorScro
     }, {
         name: "Reverse Engineering",
         image: "assets/competitionImages/reverseEngineering.JPG",
-        description: "Use your problem solving skills and hardware design experience to â€œpush square pegs into circular holes.â€ This challenge requires familiarity with programming at the bare metal level.",
+        description: "Use your problem solving skills and hardware design experience to push square pegs into circular holes.â€ This challenge requires familiarity with programming at the bare metal level.",
         challengeLink: "http://pulse.ece.illinois.edu/challenge/reverse_engineering",
     }]];
 
