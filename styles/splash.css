@@ -35,14 +35,12 @@
     background-color: rgba(33,56,123,0.5)
 }
 
-
+/* Mobile only */
 @media (max-width: 768px) {
     .landingFront {
-        background-size: contain;
-        background-color: rgb(34,58,122);
+        background-color: #0b1644;
         background-image: url('../assets/splash/front-mobile.jpg');
     }
-
 
     .automateYour_ {
         display: none;

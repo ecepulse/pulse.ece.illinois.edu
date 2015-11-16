@@ -102,6 +102,13 @@ ul {
     text-decoration: underline;
 }
 
+/* Desktop only */
+@media (min-width: 768px) {
+    .navbar_item {
+        font-size: 1.5em;
+    }
+}
+
 a:link,
 a:hover,
 a:visited,
