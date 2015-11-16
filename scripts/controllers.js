@@ -90,18 +90,6 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
     }, {
             "title": "Workshops.",
             "info": "Learn new skills with our hands-on workshops! We'll have a web development workshop, a microcontroller workshop, and two circuit workshops—one for beginners and another for those with previous experience."
-    }], [{
-            "title": "Amazing Race",
-            "info": "Work as a team to solve a series of fun, introductory ECE puzzles, all culminating in building your prize. This competition is designed to be accessible regardless of your technical expertise and is open to first-year students only."
-    }, {
-            "title": "Sensors",
-            "info": "Work on a project that combines your knowledge of the natural world, signal processing, and the human body. Together your team will produce an augmented experience with sensors such as touch, EMG, light, and audio."
-    }, {
-            "title": "Software",
-            "info": "Utilize your programming expertise to tackle a series of puzzles that will involve data structures, algorithms, programming principles, and computer security. Our challenges will be available in C, C++, Java, and Python."
-    }], [{
-            "title": "Reverse Engineering",
-            "info": "Use your problem solving skills and hardware design experience to “push square pegs into circular holes.” This challenge requires familiarity with programming at the bare metal level."
     }]];
     
     $scope.sponsors = [
@@ -456,22 +444,22 @@ ecePulse2016.controller('competitionsPage', ['$scope', '$location', '$anchorScro
     $scope.competitionInfo = [[{
         name: "Amazing Race",
         image: "assets/competitionImages/amazingRace.JPG",
-        description: "Work as a team to solve a series of fun introductory ECE and logic puzzles, all culminating in building your prize. This competition is designed to have a low technical barrier and is open to first-year students only.",
+        description: "Work as a team to solve a series of fun, introductory ECE puzzles, all culminating in building your prize. This competition is designed to be accessible regardless of your technical expertise and is open to first-year students only.",
         challengeLink: "http://pulse.ece.illinois.edu/challenge/amazing_race",
     }, {
         name: "Software",
         image: "assets/competitionImages/software.JPG",
-        description: "Utilize programming expertise to tackle a series of puzzles that will involve data structures, algorithms, programming principles, and computer security. Our challenges will be supported in C, C++, Java, and Python.",
+        description: "Utilize your programming expertise to tackle a series of puzzles that will involve data structures, algorithms, programming principles, and computer security. Our challenges will be available in C, C++, Java, and Python.",
         challengeLink: "http://pulse.ece.illinois.edu/challenge/software",
     }], [{
         name: "Sensors",
         image: "assets/competitionImages/sensors.JPG",
-        description: "Work at the intersection of the natural world, signal processing, and the human body to produce an augmented experience with sensors such as touch, EMG, light, and audio.",
+        description: "Work on a project that combines your knowledge of the natural world, signal processing, and the human body. Together your team will produce an augmented experience with sensors such as touch, EMG, light, and audio.",
         challengeLink: "http://pulse.ece.illinois.edu/challenge/sensors",
     }, {
         name: "Reverse Engineering",
         image: "assets/competitionImages/reverseEngineering.JPG",
-        description: "Use your problem solving skills and clever hardware design techniques to push square pegs into circular holes. Requires familiarity with programming at the bare metal level.",
+        description: "Use your problem solving skills and hardware design experience to â€œpush square pegs into circular holes.â€ This challenge requires familiarity with programming at the bare metal level.",
         challengeLink: "http://pulse.ece.illinois.edu/challenge/reverse_engineering",
     }]];
 
