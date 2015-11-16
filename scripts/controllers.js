@@ -89,7 +89,7 @@ ecePulse2016.controller('splashPage', ['$scope', '$location', '$anchorScroll', '
             "info": "Compete in various ECE-related challenges in the areas of signal processing, software, reverse engineering, and more. Show off your knowledge and technical skills in a fun and relaxed environment; you might even win a prize!",
     }, {
             "title": "Workshops.",
-            "info": "Learn new skills with our hands-on workshops! We'll have a web development workshop, a microcontroller workshop, and two circuit workshops—one for beginners and another for those with previous experience."
+            "info": "Learn new skills with our hands-on workshops! We'll have a web development workshop, a microcontroller workshop, and two circuit workshops-one for beginners and another for those with previous experience."
     }]];
     
     $scope.sponsors = [
