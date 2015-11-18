@@ -1,4 +1,4 @@
-var ecePulse2016 = angular.module("ECEPulse2016", []);
+var ecePulse2016 = angular.module("BradySalz", []);
 
 function changeOrientation() {
     center_navbar();
