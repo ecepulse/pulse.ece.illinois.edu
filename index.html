@@ -7,19 +7,55 @@
     </title>    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/styles/pulse.css" />
+    <link rel="stylesheet" href="assets/pulse.css" />
     
     <link rel="icon" href="favicon.png" />
 
 </head>
 
-<body ng-controller="splashPage">
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-controls="mainNav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="favicon.png">
+            </div>
 
-    <div class="col-md-12 col-lg-12 col-sm-12 landing">
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="nav navbar-nav">
+                    <li class="navbar_item">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="competitions.html">Competitions</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="schedule.html">Schedule</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="sponsor.pdf">Sponsor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+    <div class="col-md-12 col-lg-12 col-sm-12 landing landingFront">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 white vishalign automateYour_"><h1>Automate your <span class="hackertyper orange">world</span></h1></div>
-        <div class="tempt" ng-click="scrollTo('about')"></div>
+        <div class="tempt"></div>
     </div>
-    <navbar active="navbarActive"></navbar>
+    
     <div id="about" class="about col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <div class="teaserVideo col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
             <video width="100%" controls>
@@ -31,44 +67,89 @@
         <div class="mainAbout col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <p>ECE Pulse is an annual student-run conference held at Illinois that showcases innovation in electrical and computer engineering technologies. The conference is comprised of design competitions, hands-on workshops, tech talks, and networking sessions for students, alumni, faculty, and corporate representatives. Our aim is to inspire students by connecting them with cutting-edge technologies and innovative projects in the corporate world. This year's theme &mdash; Automate your World &mdash; will focus on showing attendees how our world is evolving to become more connected and collaborative everyday.</p>
         </div>
-        <div class="col-md-8 col-lg-8 col-sm-8 col-xs-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 preRegister">
-            <a href="https://ecepulse.typeform.com/to/vS6Wjo" target="_blank" class="typeform-share registerBtn btn-lg btn-danger btn-block">Register Now!</a>
+
+        <div class="col-md-8 col-lg-8 col-sm-8 col-xs-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 registerButton">
+            <a href="https://ecepulse.typeform.com/to/vS6Wjo" target="_blank" class="typeform-share registerBtn btn-lg btn-danger btn-block" style="font-size:24px">Register Now!</a>
         </div>
-        <div ng-repeat="bundle in infoCards" class="aboutCard">
-            <div ng-repeat="card in bundle" class="aboutCard col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <div class="header orange">{{card.title}}</div>
-                <div class="content">{{card.info}}</div>
+
+        <div class="aboutCard">
+            <div class="aboutCard col-lg-4 col-md-6 col-xs-12">
+                <div class="header orange">Speakers.</div>
+                <div class="content">Hear from the experts in the field of ECE. Past speakers include Irwin Jacobs of Qualcomm and Eric Klinker of BitTorrent. These presentations are more than just technical—they are filled with life advice from these brilliant minds.</div>
             </div>
-        </div>
-    </div>
-    <div class="sponsors col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-        <div class="header col-md-12 col-lg-12 col-sm-12 col-xs-12">
-            <p class="fancyHeader">Our sponsors</p>
-        </div>
-        <div ng-repeat="row in sponsors" class="sponsorRow row">
-            <div ng-repeat="sponsor in row" class="sponsorCard">
-                <div data-title="{{sponsor.title}}" class="sponsorStuff {{sponsor.layout}}">
-                    <img class="sponsorImg" src="{{sponsor.imgLink}}">
-                </div>
+            <div class="aboutCard col-lg-4 col-md-6 col-xs-12">
+                <div class="header orange">Competitions.</div>
+                <div class="content">Compete in various ECE related topics spanning from Signal Processing, Software, and many more.  Show off your knowledge and skills in ECE-related fields while having fun and winning prizes.</div>
             </div>
-        </div>
-        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-            <p class="sponsorLink">
-                <div class="orange link sponsorLink" href="http://pulse.ece.illinois.edu/2016/sponsor-page.pdf">Interested in sponsoring?</div>
-            </p>
+            <div class="aboutCard col-lg-4 col-md-6 col-xs-12">
+                <div class="header orange">Workshops.</div>
+                <div class="content">Learn some new skills with our hands-on workshops! We'll have a web development software workshop, a microcontroller workshop, and two circuit workshops for beginners and others alike.</div>
+            </div>
         </div>
     </div>
 
-    <footer>
-        <div class="footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <p class="valign">Made with &hearts; in Urbana Champaign</p>
+    <div class="col-xs-10 col-xs-offset-1">
+        <div class="header col-xs-12">
+            <p class="fancyHeader">Our sponsors</p>
         </div>
+
+        <div class="row">
+            <div class="sponsorStuff col-xs-12">
+                <a href="http://www.viasat.com" target="_blank">
+                    <img title="ViaSat" class="sponsorImg" src="assets/img/sponsors/viasat.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="sponsorStuff col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                <a href="http://www.qualcomm.com" target="_blank">
+                    <img title="Qualcomm" class="sponsorImg" src="assets/img/sponsors/qualcomm.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="sponsorStuff col-lg-3 col-md-4 col-sm-6 col-xs-10 col-xs-offset-1">
+                <a href="http://www.microsoft.com" target="_blank">
+                    <img title="Microsoft" class="sponsorImg" src="assets/img/sponsors/microsoft.png">
+                </a>
+            </div>
+            <div class="sponsorStuff col-lg-3 col-md-4 col-sm-6 col-xs-10 col-xs-offset-1">
+                <a href="http://www.nscorp.com" target="_blank">
+                    <img title="Northfolk Southern" class="sponsorImg" src="assets/img/sponsors/norfolk.png">
+                </a>
+            </div>
+            <div class="sponsorStuff col-lg-3 col-md-4 col-sm-6 col-xs-10 col-xs-offset-1">
+                <a href="http://www.google.com" target="_blank">
+                    <img title="Google" class="sponsorImg" src="assets/img/sponsors/google.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="sponsorStuff col-lg-3 col-md-4 col-sm-6 col-xs-10 col-xs-offset-1">
+                <a href="http://www.monsanto.com" target="_blank">
+                    <img title="Monsanto" class="sponsorImg" src="assets/img/sponsors/monsanto.png">
+                </a>
+            </div>
+            <div class="sponsorStuff col-lg-3 col-md-4 col-sm-6 col-xs-10 col-xs-offset-1">
+                <a href="http://www.akunacapital.com" target="_blank">
+                    <img title="Akuna" class="sponsorImg" src="assets/img/sponsors/akuna.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer col-xs-12">
+        <p class="valign">Made with &hearts; in Urbana-Champaign</p>
     </footer>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="assets/scripts/controllers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="assets/pulse.js"></script>
     
 </body>
     
