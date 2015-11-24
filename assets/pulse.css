@@ -16,11 +16,6 @@ main {
     color: rgba(1,53,103,0.95)
 }
 
-.sponsorStuff {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 .orange {
     color: #DE592B;
 }
@@ -301,12 +296,9 @@ main {
     background-image: url('../assets/img/down.png');
 }
 
-.sponsors {
-    margin-top: 50px;
-}
-
-.sponsors > .header {
-    margin-bottom:50px;
+.sponsor {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .sponsorImg {
