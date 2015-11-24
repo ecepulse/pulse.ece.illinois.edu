@@ -321,12 +321,6 @@ main {
     filter: grayscale(0);
 }
 
-.sponsorLink {
-    margin: auto;
-    text-align: center;
-    font-size: 1.1em;
-}
-
 .footer {
     height: 50px;
     background-color: rgba(1,53,103,0.95);
