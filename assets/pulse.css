@@ -13,21 +13,8 @@ main {
     height: 100%;
 }
 
-.blue {
-    background: rgba(1,53,103,0.95);
-    color: rgba(1,53,103,0.95)
-}
-
 .orange {
     color: #DE592B;
-}
-
-.lightOrange {
-    background-color: rgba(222,89,43, 0.2);
-}
-
-.white {
-    color: white; !important
 }
 
 .valign {
@@ -40,10 +27,6 @@ main {
   position: relative;
   top: 40%;
   transform: translateY(-50%);
-}
-
-.float_left {
-    float: left;
 }
 
 .header {
@@ -117,7 +100,6 @@ main {
 }
 
 .splash > .label,
-.splash > .caption,
 .splash > .automateYour_ {
     width: 100%;
     position: relative;
@@ -131,11 +113,6 @@ main {
 .splash > .label {
     font-size: 5vmax;
     line-height: 0.8;
-}
-
-.splash > .caption { 
-    font-size: 3vmax;
-    margin-top: -10px;
 }
 
 .splash > .automateYour_ {
