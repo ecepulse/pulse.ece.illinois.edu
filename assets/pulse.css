@@ -181,6 +181,11 @@ main {
     background-image: url('../assets/img/splash/contact.jpg');
 }
 
+.landingSchedule, .landingCompetitions, .landingContact {
+    height: 65%;
+    background-position: 50% 20%;
+}
+
 .landingSchedule::before, .landingCompetitions::before, .landingContact::before {
     content: "";
 
