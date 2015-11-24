@@ -46,10 +46,10 @@ main {
     line-height: 1.0;
 }
 
-/*.navbar {
-    background-color: #0b1644;
-    color: white;
-}*/
+.navbar {
+    /*color: white;*/
+    /*background-color: rgba(255,255,255,0.75);*/
+}
 
 .footer {
     height: 50px;
@@ -87,18 +87,6 @@ main {
 
 /* Splash */
 
-/* Mobile only */
-@media (max-width: 768px) {
-    .splashFront {
-        background-color: #0b1644;
-        background-image: url('../assets/img/splash/front-mobile.jpg');
-    }
-
-    .automateYour_ {
-        display: none;
-    }
-}
-
 .splash > .label,
 .splash > .automateYour_ {
     width: 100%;
@@ -108,6 +96,7 @@ main {
 
 .splash > .automateYour_ {
     top: 3em;
+    color: white;
 }
 
 .splash > .label {
@@ -292,4 +281,17 @@ main {
 .scheduleRow:focus,
 .scheduleRow:hover {
     background-color: rgba(222,89,43, 0.2);
+}
+
+/* Mobile only */
+
+@media (max-width: 768px) {
+    .splashFront {
+        background-color: #0b1644;
+        background-image: url('../assets/img/splash/front-mobile.jpg');
+    }
+
+    .automateYour_ {
+        display: none;
+    }
 }
