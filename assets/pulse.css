@@ -63,6 +63,7 @@ body, html {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    margin-bottom: 30px;
 }
 
 .splashSchedule, .splashCompetitions, .splashContact {
