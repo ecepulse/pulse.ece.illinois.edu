@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Schedule | ECE Pulse 2016</title>    
+    <title>Competitions | ECE Pulse 2016</title>    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/pulse.css" />
@@ -47,6 +47,61 @@
 
     <!-- Main Content -->
     <main>
+        <div class="col-sm-12 landing landingCompetitions">
+            <div class="col-xs-12 label orange valign">Competitions</div>
+        </div>
+
+        <div class="col-xs-10 col-xs-offset-1">
+            <p class="ccDate">Competitions: 1/23/2016</p>
+        </div>
+
+        <div class="col-xs-10 col-xs-offset-1">
+
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="ccCard">
+                        <div class="ccName" style="background-image:url(assets/img/competitions/amazingRace.jpg);">Amazing Race</div>
+                        <div class="ccDescription">Work as a team to solve a series of fun, introductory ECE puzzles, all culminating in building your prize. This competition is designed to be accessible regardless of your technical expertise and is open to first-year students only.</div>
+                        <div class="viewCompetition row">
+                            <div class="col-md-6 col-md-offset-3 col-xs-12 btn btn-default">View Competition</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="ccCard">
+                        <div class="ccName" style="background-image:url(assets/img/competitions/sensors.jpg);">Sensors</div>
+                        <div class="ccDescription">Work on a project that combines your knowledge of the natural world, signal processing, and the human body. Together your team will produce an augmented experience with sensors such as touch, EMG, light, and audio.</div>
+                        <div class="viewCompetition row">
+                            <div class="col-md-6 col-md-offset-3 col-xs-12 btn btn-default">View Competition</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="ccCard">
+                        <div class="ccName" style="background-image:url(assets/img/competitions/software.jpg);">Software</div>
+                        <div class="ccDescription">Utilize your programming expertise to tackle a series of puzzles that will involve data structures, algorithms, programming principles, and computer security. Our challenges will be available in C, C++, Java, and Python.</div>
+                        <div class="viewCompetition row">
+                            <div class="col-md-6 col-md-offset-3 col-xs-12 btn btn-default">View Competition</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="ccCard">
+                        <div class="ccName" style="background-image:url(assets/img/competitions/reverseEngineering.jpg);">Reverse Engineering</div>
+                        <div class="ccDescription">Use your problem solving skills and hardware design experience to push square pegs into circular holes. This challenge requires familiarity with programming at the bare metal level.</div>
+                        <div class="viewCompetition row">
+                            <div class="col-md-6 col-md-offset-3 col-xs-12 btn btn-default">View Competition</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
@@ -62,65 +117,3 @@
 </body>
     
 </html>
- 
-        
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html ng-app="ECEPulse2016">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>
-        ECE Pulse 2016
-    </title>    
-    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="styles/splash.css" />
-    <link rel="stylesheet" href="styles/pulse.css" />
-    <link rel="stylesheet" href="styles/contact.css" />
-    <link rel="stylesheet" href="styles/competition.css" />
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="icon" href="favicon.png" />
-</head>
-    
-<body ng-controller="competitionsPage">
-    
-    <div class="col-md-12 col-lg-12 col-sm-12 landing">
-        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 label orange valign" data-verticalPercentage="{{header.verticalPercentage}}">{{header.header}}</div>
-    </div>
-
-    
-    <!-- Navbar -->
-    <navbar active="navbarActive"></navbar>
-
-    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-        <p class="ccDate">Competitions: {{formatDate(date)}}</p>
-    </div>
-
-    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6" ng-repeat="competition in competitionInfo">
-            <div class="ccCard" ng-repeat="info in competition">
-                <div class="ccName">{{info.name}}</div>
-                <div class="ccDescription">{{info.description}}</div>
-            </div>
-        </div>
-    </div>
-
-    <footer></footer>
-    <script src="scripts/lib/angular.min.js"></script>
-    <script src="scripts/lib/jquery-1.11.3.min.js"></script>
-    <script src="scripts/lib/jquery-ui.min.js"></script>
-    <script src="scripts/lib/jquery-scrollto.js"></script>
-    <script src="scripts/controllers.js"></script>
-    <script src="scripts/landing.js"></script>
-    <script src="scripts/polyline.js"></script>
-    <script src="scripts/sponsor.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-</body>
