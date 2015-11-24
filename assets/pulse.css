@@ -175,7 +175,7 @@ main {
 }
 
 /* Splash */
-.landing {
+.splash {
     width: 100%;
     height: 100%;
     background: rgba(33,56,123,1);
@@ -184,28 +184,28 @@ main {
     background-size: cover;
 }
 
-.landingFront {
+.splashFront {
     background-image: url('../assets/img/splash/front.jpg');
 }
 
-.landingSchedule {
+.splashSchedule {
     background-image: url('../assets/img/splash/schedule.jpg');
 }
 
-.landingCompetitions {
+.splashCompetitions {
     background-image: url('../assets/img/splash/competitions.jpg');
 }
 
-.landingContact {
+.splashContact {
     background-image: url('../assets/img/splash/contact.jpg');
 }
 
-.landingSchedule, .landingCompetitions, .landingContact {
+.splashSchedule, .splashCompetitions, .splashContact {
     height: 65%;
     background-position: 50% 20%;
 }
 
-.landingSchedule::before, .landingCompetitions::before, .landingContact::before {
+.splashSchedule::before, .splashCompetitions::before, .splashContact::before {
     content: "";
 
     width: 100%;
@@ -219,7 +219,7 @@ main {
 
 /* Mobile only */
 @media (max-width: 768px) {
-    .landingFront {
+    .splashFront {
         background-color: #0b1644;
         background-image: url('../assets/img/splash/front-mobile.jpg');
     }
@@ -229,33 +229,33 @@ main {
     }
 }
 
-.landing > .label,
-.landing > .caption,
-.landing > .automateYour_ {
+.splash > .label,
+.splash > .caption,
+.splash > .automateYour_ {
     width: 100%;
     position: relative;
     text-align: center;
 }
 
-.landing > .automateYour_ {
+.splash > .automateYour_ {
     top: 3em;
 }
 
-.landing > .label {
+.splash > .label {
     font-size: 5vmax;
     line-height: 0.8;
 }
 
-.landing > .caption { 
+.splash > .caption { 
     font-size: 3vmax;
     margin-top: -10px;
 }
 
-.landing > .automateYour_ {
+.splash > .automateYour_ {
     font-size: 2vmax;
 }
 
-.landing > .dates {
+.splash > .dates {
     position: relative;
     top: 60%;
 }
