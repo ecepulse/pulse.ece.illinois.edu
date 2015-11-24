@@ -9,10 +9,6 @@ body, html {
     font-family: 'Roboto Slab', serif;
 }
 
-main {
-    height: 100%;
-}
-
 .orange {
     color: #DE592B;
 }
@@ -31,6 +27,7 @@ main {
 
 .header {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .fancyHeader {
