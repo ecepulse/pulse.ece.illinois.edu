@@ -16,12 +16,15 @@ function hackertyper() {
     var hacker = $('#hackertyper');
     var newRand = hacker.html();
     
-    while (newRand === hacker.html()) newRand = endings[Math.floor(Math.random() * endings.length)];
+    while (newRand === hacker.html()) {
+        newRand = endings[Math.floor(Math.random() * endings.length)];
+    }
     
     var cache = hacker.html().length;
     var i = 0;
     var addCallbackId, removeCallbackId;
     
+    // Delete the word one letter at a time
     var removeCallback = function() {
         
         if (i >= cache) {
@@ -38,6 +41,7 @@ function hackertyper() {
 
     removeCallbackId = setInterval(removeCallback, 200);
     
+    // Add the new word one letter at a time
     var addCallback = function() {
         if (i >= newRand.length) {
             clearInterval(addCallbackId);
