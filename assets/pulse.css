@@ -45,6 +45,10 @@ main {
     float: left;
 }
 
+.header {
+    margin-top: 30px;
+}
+
 .fancyHeader {
     font-weight: bold;
     color: #DE592B;
@@ -141,10 +145,6 @@ main {
 .scheduleRow:focus,
 .scheduleRow:hover {
     background-color: rgba(222,89,43, 0.2);
-}
-
-.schedule > .header {
-    margin-top: 30px;
 }
 
 .lightOrange {
