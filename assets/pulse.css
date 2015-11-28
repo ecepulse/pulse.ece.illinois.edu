@@ -143,17 +143,6 @@ body, html {
     margin-bottom: 10px;
 }
 
-.tempt {
-    width: 90px;
-    height: 90px;
-    margin: auto;
-    background-size: 100%;
-    position: relative;
-    bottom: -90%;
-    cursor: pointer;
-    background-image: url('../assets/img/down.png');
-}
-
 .sponsor {
     margin-top: 5px;
     margin-bottom: 5px;
