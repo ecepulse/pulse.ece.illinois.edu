@@ -98,12 +98,12 @@ body, html {
 }
 
 .splash > .label {
-    font-size: 5vmax;
+    font-size: 5vw;
     line-height: 0.8;
 }
 
 .splash > .automateYour_ {
-    font-size: 2vmax;
+    font-size: 2vw;
 }
 
 /* Home Page */
