@@ -66,12 +66,12 @@ body, html {
     margin-bottom: 30px;
 }
 
-.splashSchedule, .splashCompetitions, .splashContact {
+.splashSchedule, .splashCompetitions, .splashContact, .splashWorkshops {
     height: 65%;
     background-position: 50% 20%;
 }
 
-.splashSchedule::before, .splashCompetitions::before, .splashContact::before {
+.splashSchedule::before, .splashCompetitions::before, .splashContact::before, .splashWorkshops::before {
     content: "";
 
     width: 100%;
@@ -252,6 +252,12 @@ body, html {
 
 .viewCompetition {
     margin: auto;
+}
+
+/* Workshops */
+
+.splashWorkshops {
+    background-image: url('../assets/img/splash/workshops.jpg');
 }
 
 /* Schedule Page */
