@@ -254,13 +254,17 @@ body, html {
 }
 
 .scheduleRow {
-    height: 50px;
     font-size: 17px;
 }
 
 .scheduleRow:focus,
 .scheduleRow:hover {
     background-color: rgba(222,89,43, 0.2);
+}
+
+.subinfo {
+    margin-left: 8.33333333%;
+    font-size: 14px;
 }
 
 /* Mobile only */
