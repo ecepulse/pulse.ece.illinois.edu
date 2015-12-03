@@ -255,6 +255,7 @@ body, html {
 
 .scheduleRow {
     font-size: 17px;
+    padding: 5px 0;
 }
 
 .scheduleRow:focus,
@@ -265,6 +266,7 @@ body, html {
 .subinfo {
     margin-left: 8.33333333%;
     font-size: 14px;
+    margin-top: 10px;
 }
 
 /* Mobile only */
