@@ -154,6 +154,10 @@ body, html {
     width: 100%;
     height: 100%;
 }
+.sponsorImgSpec {
+    width: 100%;
+    height: 100%;
+}
 
 .sponsorImg:hover {
     -webkit-filter: grayscale(0);
