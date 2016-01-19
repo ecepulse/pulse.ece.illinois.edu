@@ -7,6 +7,13 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/pulse.css" />
     <link rel="icon" href="favicon.png" />
+    <style>
+        .announcerName {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -236,7 +243,7 @@
                 <div class="col-xs-3  ">1:00 PM</div>
                 <div class="col-xs-12 subinfo">
                     <div class="row">
-                        <div class="col-xs-5">Learn soldering</div>
+                        <div class="col-xs-5">In this workshop, you'll learn about circuit design and soldering as you make a Pulse Oximeter, which you will use to flash a light at the same rate as your heartbeat.</div>
                         <div class="col-xs-6">ECEB 1001</div>
                     </div>
                 </div>
@@ -248,7 +255,7 @@
                 <div class="col-xs-3  ">1:30 PM</div>
                 <div class="col-xs-12 subinfo">
                     <div class="row">
-                        <div class="col-xs-5">Learn about breadboards</div>
+                        <div class="col-xs-5">For those that are just starting in learning circuits, you'll understand the basic circuits that go behind making a mini-keyboard piano that you can use to play different tones.</div>
                         <div class="col-xs-6">ECEB 2013</div>
                     </div>
                 </div>
@@ -291,12 +298,37 @@
             </div>
 
             <div class="scheduleRow row">
-                <div class="col-xs-6  ">Startup Panel</div>
+                <div class="col-xs-6  ">Startup Panel 
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#startupModal">View Speakers</button>
+                </div>
                 <div class="col-xs-3  ">5:30 PM</div>
                 <div class="col-xs-3  ">6:30 PM</div>
                 <div class="col-xs-12 subinfo">
                     <div class="row">
-                        <div class="col-xs-5">Startup panel</div>
+                        <div class="modal fade" id="startupModal" tabindex="-1" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Startup Panel Speakers</h4>
+                              </div>
+                              <div class="modal-body">
+                                <p><div class="row announcerName">Joe Shim</div>I Graduated UIUC with a bachelors in Electrical Engineering Dec 2013. After graduation I moved to the Boston area to work at Analog Devices Inc as an applications engineer. During my time at Analog I also started a 3D Printing Company called Embark Industries as well as a Consulting Company named Quantom Engineering Consulting.<br/><br/>
+                            Currently, after some interesting turn of events, I am working at a startup named Desktop Metal doing research and development on a new type of 3D Printer that has the capability of printing metal without costing a fortune.<br/><div class="row announcerName">Will Steelman (Akuna Capital)</div>Will Steelman received his PhD in computer engineering in 2013 from Washinon University in St. Louis and currently serves as the Head of Execution Technology for Akuna Capital.   He has a passion for high performance and
+                            heterogeneous computing and has academic and industry research experience using parallel software, FPGAs, GPUs, and embedded processors to solve computing problems.<br/><br/>
+                         
+                        Upon receiving his Bachelor's degree in 2005, Will worked in the medical imaging industry, focusing on R&D for 3D ultrasound probes.  His work went on to be part of a commercialized ultrasound system that uses 3D ultrasound images to generate correlated biopsy and treatment plans for prostate cancer patients.  In 2010, Will took his experience in processing real-time image data and applied it, in the finance industry, to processing real-time market data.  There he
+                        worked for market data vendor Exegy, Inc, leading the systems engineering group.  Exegy was one of the first vendors to apply heterogeneous computing, including FPGA technology, to the real-time processing of financial data.   Will's experience with complex system architecture and market data led him to Akuna, where he was able to broaden his focus to include the entire trading pipeline from market data, to strategy development, to order generation.   Currently Will
+                        leads the Execution Technology group at Akuna Capital in Chicago, where his group is responsible for researching and developing high performance trading engines used in Akuna's options market making business.</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+                    </div>
+                        <div class="col-xs-5">
                         <div class="col-xs-6">ECEB 1013</div>
                     </div>
                 </div>
