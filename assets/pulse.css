@@ -273,6 +273,12 @@ body, html {
     margin-top: 10px;
 }
 
+.announcerName {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+}
+
 /* Mobile only */
 
 @media (max-width: 768px) {
